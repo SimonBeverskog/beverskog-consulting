@@ -1,29 +1,47 @@
-import { TreePine, Leaf, Map, FileCheck } from "lucide-react";
+import { TreePine, Bird, Leaf, Map, FileCheck, BookOpen, Shield } from "lucide-react";
 
 const services = [
   {
     icon: TreePine,
-    title: "Timber Valuation",
+    title: "Naturvärdesinventering (NVI)",
     description:
-      "Accurate assessments of standing timber value, growth projections, and harvest planning to maximise your woodland's economic potential.",
+      "Inventering av naturvärden i skogs- och markområden med vedertagen metodik och hög precision.",
+  },
+  {
+    icon: Bird,
+    title: "Fågelinventeringar",
+    description:
+      "Inventering av häckfåglar, rovfåglar och känsliga arter med ledande metodik och artkunskap.",
   },
   {
     icon: Leaf,
-    title: "Conservation Planning",
+    title: "Artinventeringar & artskydd",
     description:
-      "Biodiversity surveys, habitat management plans, and strategies to enhance ecological value while meeting regulatory requirements.",
+      "Artinventeringar och bedömning av artskydd kopplat till skogliga åtgärder och planering.",
   },
   {
     icon: Map,
-    title: "Environmental Permitting",
+    title: "Nyckelbiotoper & naturvärden",
     description:
-      "Navigating complex environmental regulations, preparing impact assessments, and securing the permits you need for your projects.",
+      "Bedömning av naturvärden och nyckelbiotoper som underlag för beslut och hänsyn.",
   },
   {
     icon: FileCheck,
-    title: "Forest Management",
+    title: "Hänsyns- & åtgärdsförslag",
     description:
-      "Long-term management plans covering planting, thinning, disease control, and sustainable harvesting for productive woodlands.",
+      "Konkreta förslag inför avverkning eller andra skogliga insatser med balans mellan produktion och naturvärden.",
+  },
+  {
+    icon: Shield,
+    title: "Strategisk rådgivning",
+    description:
+      "Rådgivning i planering och strategiskt naturvårdsarbete för företag och organisationer.",
+  },
+  {
+    icon: BookOpen,
+    title: "Utbildningar & föreläsningar",
+    description:
+      "Utbildningar och föreläsningar inom naturvård, biologisk mångfald och skogsbruk.",
   },
 ];
 
@@ -33,14 +51,14 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="text-sm font-semibold tracking-widest text-accent uppercase mb-2 font-body">
-            What I Offer
+            Vad jag erbjuder
           </p>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
-            Services
+            Tjänster
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {services.map((service) => (
             <div
               key={service.title}
