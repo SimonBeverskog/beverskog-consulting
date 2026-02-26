@@ -86,7 +86,8 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-heading font-semibold text-foreground mb-1">E-post</h4>
-                <p className="text-muted-foreground text-sm font-body">info@beverskog.se</p>
+                <p className="text-muted-foreground text-sm font-body">Lynxbe@hotmail.com
+                </p>
               </div>
             </div>
 
@@ -117,7 +118,6 @@ const ContactSection = () => {
         </div>
       </div>
     </section>);
-
 };
 
 export default ContactSection;
