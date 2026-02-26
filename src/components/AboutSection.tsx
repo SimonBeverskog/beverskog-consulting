@@ -8,11 +8,11 @@ const AboutSection = () => {
           <div className="relative">
             <div className="overflow-hidden rounded-lg shadow-xl">
               <img
-                src={aboutImage}
+
                 alt="Lynx Beverskog i fält"
                 className="w-full h-[400px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
-                loading="lazy"
-              />
+                loading="lazy" src="/lovable-uploads/a7c501af-6407-43b5-a802-e28ec24533fb.jpg" />
+
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-lg -z-10" />
             <div className="absolute -top-4 -left-4 w-32 h-32 bg-accent/10 rounded-lg -z-10" />
@@ -37,8 +37,8 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default AboutSection;
