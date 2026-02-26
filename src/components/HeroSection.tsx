@@ -18,7 +18,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in-up">Beverskog Consulting
+        <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in-up">Beverskog Consulting 
 Skoglig expertis & naturvård
           <br />
           <span className="text-secondary text-4xl">Skoglig expertis & naturvård</span>
