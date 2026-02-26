@@ -5,15 +5,15 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-    >
+      className="relative min-h-screen flex items-center justify-center overflow-hidden">
+
       <div className="absolute inset-0">
         <img
           src={heroImage}
           alt="Dimmig skogsvy i gryningen"
           className="w-full h-full object-cover"
-          loading="eager"
-        />
+          loading="eager" />
+
         <div className="absolute inset-0 bg-foreground/50" />
       </div>
 
@@ -21,7 +21,7 @@ const HeroSection = () => {
         <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in-up">
           Beverskog Consulting:
           <br />
-          <span className="text-secondary">Skoglig expertis & naturvård</span>
+          <span className="text-secondary text-4xl">Skoglig expertis & naturvård</span>
         </h1>
         <p className="text-lg md:text-xl text-secondary/80 max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
           Naturvärdesinventering, fågelinventeringar, artskydd och strategisk rådgivning.
@@ -32,8 +32,8 @@ const HeroSection = () => {
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
