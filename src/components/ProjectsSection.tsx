@@ -5,24 +5,24 @@ import projectReforestation from "@/assets/project-reforestation.jpg";
 const projects = [
   {
     image: projectTimber,
-    title: "Oak Woodland Valuation",
+    title: "Fågelinventering i produktionsskog",
     description:
-      "Conducted a comprehensive timber valuation across 120 hectares of mixed oak woodland for a private estate.",
-    result: "Identified £340K in standing timber value and developed a 10-year sustainable harvest plan.",
+      "Genomförde en omfattande häckfågelinventering i ett stort skogsinnehav inför planerade avverkningar.",
+    result: "Identifierade känsliga arter och levererade hänsynsförslag som möjliggjorde avverkning med bevarad biologisk mångfald.",
   },
   {
     image: projectConservation,
-    title: "Wetland Habitat Restoration",
+    title: "Naturvärdesinventering för skogsbolag",
     description:
-      "Designed and implemented a conservation management plan to restore a degraded wetland ecosystem.",
-    result: "Achieved protected habitat status within 18 months, with a 40% increase in species diversity.",
+      "Inventerade och bedömde naturvärden i ett 200 hektar stort skogsområde med fokus på nyckelbiotoper.",
+    result: "Kartlade 15 nyckelbiotoper och levererade åtgärdsförslag som integrerades i bolagets skogsbruksplan.",
   },
   {
     image: projectReforestation,
-    title: "Community Reforestation Programme",
+    title: "Artskyddsutredning vid exploatering",
     description:
-      "Led the planning and planting phase of a 50-hectare reforestation initiative on former agricultural land.",
-    result: "Successfully planted 25,000 native trees with 92% survival rate after the first year.",
+      "Utförde artskyddsbedömning inför ett infrastrukturprojekt i skogsmark med kända naturvärden.",
+    result: "Säkerställde att projektet kunde genomföras med rätt hänsyn, utan negativ påverkan på skyddade arter.",
   },
 ];
 
@@ -32,10 +32,10 @@ const ProjectsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="text-sm font-semibold tracking-widest text-accent uppercase mb-2 font-body">
-            My Work
+            Mitt arbete
           </p>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
-            Projects & Case Studies
+            Projekt & uppdrag
           </h2>
         </div>
 
@@ -62,7 +62,7 @@ const ProjectsSection = () => {
                 </p>
                 <div className="border-t border-border pt-4">
                   <p className="text-sm font-body">
-                    <span className="font-semibold text-primary">Result:</span>{" "}
+                    <span className="font-semibold text-primary">Resultat:</span>{" "}
                     <span className="text-muted-foreground">{project.result}</span>
                   </p>
                 </div>
