@@ -1,0 +1,24 @@
+import { Linkedin } from "lucide-react";
+
+const Footer = () => {
+  return (
+    <footer className="bg-primary text-primary-foreground py-8">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p className="text-sm text-primary-foreground/70 font-body">
+          © {new Date().getFullYear()} GreenRoot Consulting. All rights reserved.
+        </p>
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-200"
+          aria-label="LinkedIn profile"
+        >
+          <Linkedin size={20} />
+        </a>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
