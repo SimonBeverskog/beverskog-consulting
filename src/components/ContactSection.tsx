@@ -13,7 +13,7 @@ const ContactSection = () => {
     e.preventDefault();
     toast({
       title: "Meddelande skickat!",
-      description: "Tack för att du hör av dig. Jag återkommer så snart jag kan.",
+      description: "Tack för att du hör av dig. Jag återkommer så snart jag kan."
     });
     setForm({ name: "", email: "", phone: "", message: "" });
   };
@@ -39,8 +39,8 @@ const ContactSection = () => {
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 required
                 maxLength={100}
-                className="bg-card"
-              />
+                className="bg-card" />
+
             </div>
             <div>
               <Input
@@ -50,8 +50,8 @@ const ContactSection = () => {
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 required
                 maxLength={255}
-                className="bg-card"
-              />
+                className="bg-card" />
+
             </div>
             <div>
               <Input
@@ -60,8 +60,8 @@ const ContactSection = () => {
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
                 maxLength={20}
-                className="bg-card"
-              />
+                className="bg-card" />
+
             </div>
             <div>
               <Textarea
@@ -71,8 +71,8 @@ const ContactSection = () => {
                 required
                 maxLength={1000}
                 rows={5}
-                className="bg-card resize-none"
-              />
+                className="bg-card resize-none" />
+
             </div>
             <Button type="submit" size="lg" className="w-full">
               Skicka meddelande
@@ -96,7 +96,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-heading font-semibold text-foreground mb-1">Telefon</h4>
-                <p className="text-muted-foreground text-sm font-body">070-XXX XX XX</p>
+                <p className="text-muted-foreground text-sm font-body">+46708896588</p>
               </div>
             </div>
 
@@ -116,8 +116,8 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default ContactSection;
