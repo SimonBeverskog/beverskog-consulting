@@ -11,7 +11,7 @@ const projects = [
     result: "Identifierade känsliga arter och levererade hänsynsförslag som möjliggjorde avverkning med bevarad biologisk mångfald.",
   },
   {
-    image: projectTimber,
+    image: projectReforestation,
     title: "Naturvärdesinventering för skogsbolag",
     description:
       "Inventerade och bedömde naturvärden i ett 200 hektar stort skogsområde med fokus på nyckelbiotoper.",
