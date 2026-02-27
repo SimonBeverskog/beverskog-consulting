@@ -4,14 +4,14 @@ import projectReforestation from "@/assets/project-reforestation.jpg";
 
 const projects = [
   {
-    image: projectTimber,
+    image: projectConservation,
     title: "Fågelinventering i produktionsskog",
     description:
       "Genomförde en omfattande häckfågelinventering i ett stort skogsinnehav inför planerade avverkningar.",
     result: "Identifierade känsliga arter och levererade hänsynsförslag som möjliggjorde avverkning med bevarad biologisk mångfald.",
   },
   {
-    image: projectConservation,
+    image: projectTimber,
     title: "Naturvärdesinventering för skogsbolag",
     description:
       "Inventerade och bedömde naturvärden i ett 200 hektar stort skogsområde med fokus på nyckelbiotoper.",
