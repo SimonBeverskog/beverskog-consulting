@@ -2,20 +2,38 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactSection = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Meddelande skickat!",
-      description: "Tack för att du hör av dig. Jag återkommer så snart jag kan."
-    });
-    setForm({ name: "", email: "", phone: "", message: "" });
+    setIsSubmitting(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: form,
+      });
+      if (error) throw error;
+      toast({
+        title: "Meddelande skickat!",
+        description: "Tack för att du hör av dig. Jag återkommer så snart jag kan.",
+      });
+      setForm({ name: "", email: "", phone: "", message: "" });
+    } catch (err) {
+      console.error("Contact form error:", err);
+      toast({
+        title: "Något gick fel",
+        description: "Meddelandet kunde inte skickas. Försök igen senare.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -74,8 +92,15 @@ const ContactSection = () => {
                 className="bg-card resize-none" />
 
             </div>
-            <Button type="submit" size="lg" className="w-full">
-              Skicka meddelande
+            <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Skickar...
+                </>
+              ) : (
+                "Skicka meddelande"
+              )}
             </Button>
           </form>
 
