@@ -5,7 +5,7 @@ import projectReforestation from "@/assets/project-reforestation.jpg";
 const projects = [
   {
     image: projectTimber,
-    title: "Systematiska fågelinventeringar med hög precision",
+    title: "Fågelinventeringar med hög precision",
     description:
       "Genomförde en omfattande fågelinventering inom ett större skogsinnehav som underlag inför planerade avverkningar. Arbetet omfattade systematisk kartläggning av häckande arter och identifiering av områden med särskilda naturvärden.",
     result: "Levererade tydliga rekommendationer och hänsynsförslag som möjliggjorde skogsbruksåtgärder i linje med artskyddet och en långsiktigt bevarad biologisk mångfald.",
