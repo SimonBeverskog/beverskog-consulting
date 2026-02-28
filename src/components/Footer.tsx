@@ -8,7 +8,7 @@ const Footer = () => {
           © {new Date().getFullYear()} Beverskog Consulting AB. Alla rättigheter förbehållna.
         </p>
         <a
-          href="https://www.linkedin.com/in/lynx-beverskog/"
+          href="https://www.linkedin.com/in/lynx-beverskog-22170415a/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-200"
