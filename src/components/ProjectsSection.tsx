@@ -12,17 +12,17 @@ const projects = [
   },
   {
     image: projectReforestation,
-    title: "Naturvärdesinventering för skogsbolag",
+    title: "Naturvärdesinventering som beslutsunderlag",
     description:
-      "Inventerade och bedömde naturvärden i ett 200 hektar stort skogsområde med fokus på nyckelbiotoper.",
-    result: "Kartlade 15 nyckelbiotoper och levererade åtgärdsförslag som integrerades i bolagets skogsbruksplan.",
+      "Genomförde en naturvärdesinventering i ett större skogsområde med fokus på att identifiera och avgränsa nyckelbiotoper. Arbetet omfattade fältbedömningar och dokumentation av strukturer och artförekomster.",
+    result: "Kartlade nyckelbiotoper och lämnade åtgärds- och hänsynsförslag som införlivades i bolagets skogsbruksplan.",
   },
   {
     image: projectConservation,
     title: "Artskyddsutredning vid exploatering",
     description:
-      "Utförde artskyddsbedömning inför ett infrastrukturprojekt i skogsmark med kända naturvärden.",
-    result: "Säkerställde att projektet kunde genomföras med rätt hänsyn, utan negativ påverkan på skyddade arter.",
+      "Genomförde en artskyddsbedömning inför ett infrastrukturprojekt i skogsmark med dokumenterade naturvärden. Arbetet omfattade fältkontroller, bedömning av skyddade arter och analys av potentiell påverkan.",
+    result: "Säkerställde att projektet kunde genomföras med korrekta hänsynsåtgärder och utan negativ påverkan på skyddade arter.",
   },
 ];
 
