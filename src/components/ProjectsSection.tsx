@@ -1,6 +1,9 @@
 import projectTimber from "@/assets/project-timber.jpg";
 import projectConservation from "@/assets/project-conservation.jpg";
 import projectReforestation from "@/assets/project-reforestation.jpg";
+import projectWetland from "@/assets/project-wetland.jpg";
+import projectBiodiversity from "@/assets/project-biodiversity.jpg";
+import projectImpact from "@/assets/project-impact.jpg";
 
 const projects = [
   {
@@ -23,6 +26,27 @@ const projects = [
     description:
       "Genomförde en artskyddsbedömning inför ett infrastrukturprojekt i skogsmark med dokumenterade naturvärden. Arbetet omfattade fältkontroller, bedömning av skyddade arter och analys av potentiell påverkan.",
     result: "Säkerställde att projektet kunde genomföras med korrekta hänsynsåtgärder och utan negativ påverkan på skyddade arter.",
+  },
+  {
+    image: projectWetland,
+    title: "Våtmarksinventering och restaureringsplan",
+    description:
+      "Utförde en inventering av en degraderad våtmark i anslutning till skogsmark, med fokus på hydrologiska förutsättningar och förekomst av våtmarksarter. Arbetet inkluderade bedömning av restaureringspotential.",
+    result: "Levererade en restaureringsplan som låg till grund för markägarens ansökan om bidrag för våtmarksåterställning.",
+  },
+  {
+    image: projectBiodiversity,
+    title: "Biologisk mångfald i gammelskog",
+    description:
+      "Kartlade den biologiska mångfalden i ett område med gammelskog, med särskilt fokus på vedlevande svampar, lavar och mossor. Inventeringen dokumenterade rödlistade arter och strukturer av högt naturvärde.",
+    result: "Resulterade i formellt skydd av området och underlag för skötselplan med fokus på att bevara den biologiska mångfalden.",
+  },
+  {
+    image: projectImpact,
+    title: "Miljökonsekvensbeskrivning för vindkraft",
+    description:
+      "Ansvarade för den naturvårdande delen av en miljökonsekvensbeskrivning inför etablering av vindkraft i skogslandskap. Arbetet omfattade fältinventeringar av fågel, fladdermöss och känsliga biotoper.",
+    result: "Identifierade konfliktytor och föreslog placeringsalternativ som minimerade påverkan på naturvärden och skyddade arter.",
   },
 ];
 
