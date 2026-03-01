@@ -11,7 +11,7 @@ const projects = [
     title: "Fågelinventeringar med hög precision",
     description:
       "Genomförde en omfattande fågelinventering inom ett större skogsinnehav som underlag inför planerade avverkningar. Arbetet omfattade systematisk kartläggning av häckande arter och identifiering av områden med särskilda naturvärden.",
-    result: "Levererade tydliga rekommendationer och hänsynsförslag som möjliggjorde skogsbruksåtgärder i linje med artskyddet och en långsiktigt bevarad biologisk mångfald.",
+    result: "gtLevererade tydliga rekommendationer och hänsynsförslag som möjliggjorde skogsbruksåtgärder i linje med artskyddet och en långsiktigt bevarad biologisk mångfald.",
   },
   {
     image: projectReforestation,
@@ -36,17 +36,17 @@ const projects = [
   },
   {
     image: projectBiodiversity,
-    title: "Biologisk mångfald i gammelskog",
+    title: "Nyckelbiotopsbedömning inför skogliga åtgärder",
     description:
-      "Kartlade den biologiska mångfalden i ett område med gammelskog, med särskilt fokus på vedlevande svampar, lavar och mossor. Inventeringen dokumenterade rödlistade arter och strukturer av högt naturvärde.",
-    result: "Resulterade i formellt skydd av området och underlag för skötselplan med fokus på att bevara den biologiska mångfalden.",
+      "Genomförde en systematisk bedömning av potentiella nyckelbiotoper inom ett skogslandskap inför planerade skogsbruksåtgärder. Arbetet omfattade noggranna fältinventeringar, kartläggning av hydrologiska och ekologiska strukturer samt identifiering av signalarter enligt gällande kriterier.",
+    result: "Levererade detaljerat beslutsunderlag med konkreta åtgärds- och hänsynsförslag som integrerades i skogsbruksplanen och säkerställde långsiktigt bevarande av de identifierade naturvärdena.",
   },
   {
     image: projectImpact,
-    title: "Miljökonsekvensbeskrivning för vindkraft",
+    title: "Miljökonsekvensbedömning och våtmarksrestaurering",
     description:
-      "Ansvarade för den naturvårdande delen av en miljökonsekvensbeskrivning inför etablering av vindkraft i skogslandskap. Arbetet omfattade fältinventeringar av fågel, fladdermöss och känsliga biotoper.",
-    result: "Identifierade konfliktytor och föreslog placeringsalternativ som minimerade påverkan på naturvärden och skyddade arter.",
+      "Genomförde en integrerad bedömning av naturvärden inför etablering av vindkraft i ett skogslandskap samt inventering av en angränsande degraderad våtmark. Arbetet omfattade fältinventeringar av fåglar, fladdermöss och känsliga biotoper, hydrologisk analys, kartläggning av våtmarksarter samt bedömning av restaurerings- och etableringspotential.",
+    result: "Kartlade planer som identifierade konfliktytor och föreslog placeringsalternativ för vindkraft med minimal påverkan på naturvärden, samtidigt som en restaureringsplan för våtmarken utformades som underlag för bidragsansökan och långsiktigt bevarande.",
   },
 ];
 
