@@ -52,7 +52,7 @@ ${message}
       },
       body: JSON.stringify({
         from: "Kontaktformulär <onboarding@resend.dev>",
-        to: ["Lynxbe@hotmail.com"],
+        to: ["simon.beverskog@gmail.com"],
         subject: `Nytt meddelande från ${name}`,
         text: emailBody,
         reply_to: email,
