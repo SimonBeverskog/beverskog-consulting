@@ -36,10 +36,10 @@ const projects = [
   },
   {
     image: projectBiodiversity,
-    title: "Nyckelbiotopsbedömning inför skogliga åtgärder",
+    title: "FSC- och PEFC-anpassad nyckelbiotopsbedömning",
     description:
-      "Genomförde en systematisk bedömning av potentiella nyckelbiotoper inom ett skogslandskap inför planerade skogsbruksåtgärder. Arbetet omfattade noggranna fältinventeringar, kartläggning av hydrologiska och ekologiska strukturer samt identifiering av signalarter enligt gällande kriterier.",
-    result: "Levererade detaljerat beslutsunderlag med konkreta åtgärds- och hänsynsförslag som integrerades i skogsbruksplanen och säkerställde långsiktigt bevarande av de identifierade naturvärdena.",
+      "Genomförde omfattande nyckelbiotopsbedömningar med fältinventering, artidentifiering och analys av ekologiska strukturer. Arbetet utfördes rutinmässigt enligt både FSC:s och PEFC:s krav och integrerades i skogsbrukets planering och hänsynstagande.",
+    result: "Tydliga beslutsunderlag som säkerställde korrekt naturhänsyn och uppfyllande av certifieringskraven.",
   },
   {
     image: projectImpact,
