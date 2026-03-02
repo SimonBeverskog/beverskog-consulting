@@ -16,12 +16,12 @@ const ContactSection = () => {
     setIsSubmitting(true);
     try {
       const { data, error } = await supabase.functions.invoke("send-contact-email", {
-        body: form,
+        body: form
       });
       if (error) throw error;
       toast({
         title: "Meddelande skickat!",
-        description: "Tack för att du hör av dig. Jag återkommer så snart jag kan.",
+        description: "Tack för att du hör av dig. Jag återkommer så snart jag kan."
       });
       setForm({ name: "", email: "", phone: "", message: "" });
     } catch (err) {
@@ -29,7 +29,7 @@ const ContactSection = () => {
       toast({
         title: "Något gick fel",
         description: "Meddelandet kunde inte skickas. Försök igen senare.",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
@@ -93,14 +93,14 @@ const ContactSection = () => {
 
             </div>
             <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
-              {isSubmitting ? (
-                <>
+              {isSubmitting ?
+              <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                   Skickar...
-                </>
-              ) : (
-                "Skicka meddelande"
-              )}
+                </> :
+
+              "Skicka meddelande"
+              }
             </Button>
           </form>
 
@@ -111,7 +111,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-heading font-semibold text-foreground mb-1">E-post</h4>
-                <p className="text-muted-foreground text-sm font-body">Lynxbe@hotmail.com
+                <p className="text-muted-foreground text-sm font-body">Lynx@beverskog.com
                 </p>
               </div>
             </div>
