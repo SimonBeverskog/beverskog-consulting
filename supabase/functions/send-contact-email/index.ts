@@ -51,8 +51,8 @@ ${message}
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Kontaktformulär <onboarding@resend.dev>",
-        to: ["simon.beverskog@gmail.com"],
+        from: "Kontaktformulär <noreply@beverskog.com>",
+        to: ["Lynxbe@hotmail.com"],
         subject: `Nytt meddelande från ${name}`,
         text: emailBody,
         reply_to: email,
