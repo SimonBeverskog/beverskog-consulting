@@ -1,49 +1,6 @@
-import { TreePine, Bird, Leaf, Map, FileCheck, BookOpen, Shield } from "lucide-react";
-
-const services = [
-  {
-    icon: TreePine,
-    title: "Naturvärdesinventering (NVI)",
-    description:
-      "Inventering av naturvärden i skogs- och markområden med vedertagen metodik och hög precision.",
-  },
-  {
-    icon: Bird,
-    title: "Fågelinventeringar",
-    description:
-      "Inventering av häckfåglar, rovfåglar och känsliga arter med ledande metodik och artkunskap.",
-  },
-  {
-    icon: Leaf,
-    title: "Artinventeringar & artskydd",
-    description:
-      "Artinventeringar och bedömning av artskydd kopplat till skogliga åtgärder och planering.",
-  },
-  {
-    icon: Map,
-    title: "Nyckelbiotoper & naturvärden",
-    description:
-      "Bedömning av naturvärden och nyckelbiotoper som underlag för beslut och hänsyn.",
-  },
-  {
-    icon: FileCheck,
-    title: "Hänsyns- & åtgärdsförslag",
-    description:
-      "Konkreta förslag inför avverkning eller andra skogliga insatser med balans mellan produktion och naturvärden.",
-  },
-  {
-    icon: Shield,
-    title: "Strategisk rådgivning",
-    description:
-      "Rådgivning i planering och strategiskt naturvårdsarbete för företag och organisationer.",
-  },
-  {
-    icon: BookOpen,
-    title: "Utbildningar & föreläsningar",
-    description:
-      "Utbildningar och föreläsningar inom naturvård, biologisk mångfald och skogsbruk.",
-  },
-];
+import { Link } from "react-router-dom";
+import { services } from "@/data/services";
+import { ArrowRight } from "lucide-react";
 
 const ServicesSection = () => {
   return (
@@ -60,8 +17,9 @@ const ServicesSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {services.map((service) => (
-            <div
-              key={service.title}
+            <Link
+              key={service.slug}
+              to={`/tjanster/${service.slug}`}
               className="group bg-card rounded-lg p-8 shadow-sm hover:shadow-lg border border-border/50 transition-all duration-300 hover:-translate-y-1"
             >
               <div className="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors duration-300">
@@ -70,10 +28,13 @@ const ServicesSection = () => {
               <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed font-body">
+              <p className="text-muted-foreground text-sm leading-relaxed font-body mb-4">
                 {service.description}
               </p>
-            </div>
+              <span className="inline-flex items-center gap-1 text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Läs mer <ArrowRight className="w-4 h-4" />
+              </span>
+            </Link>
           ))}
         </div>
       </div>
