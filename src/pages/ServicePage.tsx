@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { services } from "@/data/services";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -6,7 +6,15 @@ import { ArrowLeft } from "lucide-react";
 
 const ServicePage = () => {
   const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
   const service = services.find((s) => s.slug === slug);
+
+  const handleBackToServices = () => {
+    navigate("/");
+    setTimeout(() => {
+      document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
 
   if (!service) {
     return (
@@ -26,13 +34,13 @@ const ServicePage = () => {
       <Navbar />
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 max-w-3xl">
-          <Link
-            to="/#services"
+          <button
+            onClick={handleBackToServices}
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
             Tillbaka till tjänster
-          </Link>
+          </button>
 
           <div className="flex items-center gap-4 mb-8">
             <div className="w-14 h-14 rounded-md bg-primary/10 flex items-center justify-center">
