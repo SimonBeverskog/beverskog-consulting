@@ -2,6 +2,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { services } from "@/data/services";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ContactSection from "@/components/ContactSection";
 import { ArrowLeft } from "lucide-react";
 
 const ServicePage = () => {
@@ -56,6 +57,7 @@ const ServicePage = () => {
           </p>
         </div>
       </main>
+      <ContactSection />
       <Footer />
     </div>
   );
