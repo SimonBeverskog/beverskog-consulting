@@ -52,23 +52,14 @@ const ServicePage = () => {
             </h1>
           </div>
 
-          <section className="mb-12">
-            <h2 className="font-heading text-xl md:text-2xl font-semibold text-foreground mb-4">
-              Vad innebär {service.title.toLowerCase()}?
-            </h2>
+          <div className="space-y-6">
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-body">
               {service.longDescription}
             </p>
-          </section>
-
-          <section>
-            <h2 className="font-heading text-xl md:text-2xl font-semibold text-foreground mb-4">
-              Varför anlita Beverskog Consulting?
-            </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-body">
               {service.whyHireMe}
             </p>
-          </section>
+          </div>
         </div>
       </main>
       <ContactSection />
