@@ -61,6 +61,15 @@ const ServicePage = () => {
               {service.whyHireMe}
             </p>
           </div>
+
+          <Button
+            size="lg"
+            className="mt-10"
+            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+          >
+            Kontakta mig
+            <ArrowDown className="ml-2 w-4 h-4" />
+          </Button>
         </div>
       </main>
       <ContactSection />
