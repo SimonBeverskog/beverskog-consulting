@@ -3,7 +3,8 @@ import { services } from "@/data/services";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
-import { ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, ArrowDown } from "lucide-react";
 
 const ServicePage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -60,6 +61,15 @@ const ServicePage = () => {
               {service.whyHireMe}
             </p>
           </div>
+
+          <Button
+            size="lg"
+            className="mt-10"
+            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+          >
+            Kontakta mig
+            <ArrowDown className="ml-2 w-4 h-4" />
+          </Button>
         </div>
       </main>
       <ContactSection />
