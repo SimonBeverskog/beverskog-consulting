@@ -3,7 +3,8 @@ import { services } from "@/data/services";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
-import { ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, ArrowDown } from "lucide-react";
 
 const ServicePage = () => {
   const { slug } = useParams<{ slug: string }>();
