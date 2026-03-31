@@ -58,7 +58,20 @@ const ServicePage = () => {
               {service.longDescription}
             </p>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-body">
-              {service.whyHireMe}
+              <strong className="text-foreground">Beverskog Consulting</strong>{" "}
+              {service.whyHireMeIntro.replace(/^Beverskog Consulting\s*/i, "").replace(/^Med Beverskog Consulting\s*/i, "")}
+              {service.whyHireMeIntro.startsWith("Med") && !service.whyHireMeIntro.startsWith("Med Beverskog") ? service.whyHireMeIntro : ""}
+            </p>
+            <ul className="space-y-3 pl-1">
+              {service.whyHireMeBullets.map((bullet, index) => (
+                <li key={index} className="flex items-start gap-3 text-base md:text-lg text-muted-foreground leading-relaxed font-body">
+                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                  {bullet}
+                </li>
+              ))}
+            </ul>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-body">
+              {service.whyHireMeOutro}
             </p>
           </div>
 
