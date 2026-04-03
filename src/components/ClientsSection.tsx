@@ -54,12 +54,14 @@ const ClientsSection = () => {
               }`}
               style={{ transitionDelay: isVisible ? `${index * 150}ms` : "0ms" }}
             >
-              <img
-                src={client.logo}
-                alt={client.name}
-                className="h-12 md:h-16 w-auto object-contain"
-                loading="lazy"
-              />
+              <div className="w-40 md:w-48 h-14 md:h-16 flex items-center justify-center">
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="max-h-full max-w-full object-contain"
+                  loading="lazy"
+                />
+              </div>
             </div>
           ))}
         </div>
