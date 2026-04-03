@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import clientUaf from "@/assets/client-uaf.png";
 import clientHolmen from "@/assets/client-holmen.webp";
 import clientMellanskog from "@/assets/client-mellanskog.png";
@@ -13,8 +14,25 @@ const clients = [
 ];
 
 const ClientsSection = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="py-16 md:py-24 bg-muted/30">
+    <section ref={sectionRef} className="py-16 md:py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <p className="text-sm font-semibold tracking-widest text-accent uppercase mb-2 font-body">
@@ -26,10 +44,15 @@ const ClientsSection = () => {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-          {clients.map((client) => (
+          {clients.map((client, index) => (
             <div
               key={client.name}
-              className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
+              className={`transition-all duration-700 ${
+                isVisible
+                  ? "grayscale-0 opacity-100"
+                  : "grayscale opacity-50"
+              }`}
+              style={{ transitionDelay: isVisible ? `${index * 150}ms` : "0ms" }}
             >
               <img
                 src={client.logo}
