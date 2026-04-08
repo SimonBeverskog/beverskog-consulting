@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Briefcase, Users, TrendingUp, MapPin, Send } from "lucide-react";
+import CareerContactSection from "@/components/CareerContactSection";
+import { Briefcase, Users, TrendingUp, MapPin } from "lucide-react";
 
 const benefits = [
   {
@@ -106,25 +107,7 @@ const CareerPage = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-primary/5">
-        <div className="container mx-auto px-4 text-center max-w-2xl">
-          <h2 className="font-heading text-3xl font-bold text-foreground mb-4">
-            Intresserad?
-          </h2>
-          <p className="text-muted-foreground mb-8 leading-relaxed">
-            Skicka din ansökan eller ett meddelande till oss så berättar vi mer om 
-            möjligheterna hos Beverskog Consulting.
-          </p>
-          <a
-            href="/#contact"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-full font-medium hover:bg-primary/90 transition-colors"
-          >
-            <Send className="w-4 h-4" />
-            Kontakta oss
-          </a>
-        </div>
-      </section>
+      <CareerContactSection />
 
       <Footer />
     </div>
