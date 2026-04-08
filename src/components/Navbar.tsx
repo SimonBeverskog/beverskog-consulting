@@ -8,6 +8,7 @@ const navLinks = [
   { label: "Tjänster", href: "#services" },
   { label: "Projekt", href: "#projects" },
   { label: "Kontakt", href: "#contact" },
+  { label: "Karriär", href: "/karriar", isRoute: true },
 ];
 
 const Navbar = () => {
