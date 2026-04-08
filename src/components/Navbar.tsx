@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.svg";
 
 const navLinks = [
@@ -14,6 +15,14 @@ const navLinks = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
+  const renderLink = (link: typeof navLinks[0], onClick?: () => void) => {
+    const className = "text-sm font-medium text-foreground/70 hover:text-primary transition-colors duration-200";
+    if (link.isRoute) {
+      return <Link to={link.href} className={className} onClick={onClick}>{link.label}</Link>;
+    }
+    return <a href={link.href} className={className} onClick={onClick}>{link.label}</a>;
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
@@ -24,14 +33,7 @@ const Navbar = () => {
 
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors duration-200"
-              >
-                {link.label}
-              </a>
-            </li>
+            <li key={link.href}>{renderLink(link)}</li>
           ))}
         </ul>
 
@@ -48,15 +50,7 @@ const Navbar = () => {
         <div className="md:hidden bg-background border-b border-border">
           <ul className="flex flex-col py-4 px-4 gap-4">
             {navLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
-                  onClick={() => setOpen(false)}
-                >
-                  {link.label}
-                </a>
-              </li>
+              <li key={link.href}>{renderLink(link, () => setOpen(false))}</li>
             ))}
           </ul>
         </div>
