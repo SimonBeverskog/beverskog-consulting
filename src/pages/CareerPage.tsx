@@ -79,29 +79,9 @@ const CareerPage = () => {
             Vem söker vi?
           </h2>
           <div className="bg-card rounded-2xl p-8 shadow-sm border border-border/50">
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Vi letar efter personer med erfarenhet och passion för skogsindustrin. 
-              Oavsett om du är specialist inom skogsbruk, logistik, hållbarhet eller 
-              affärsutveckling – vi vill höra från dig.
+            <p className="text-muted-foreground leading-relaxed">
+              Inventeringar, analyser och rådgivning i skogliga miljöer.
             </p>
-            <ul className="space-y-3 text-muted-foreground">
-              <li className="flex items-start gap-2">
-                <span className="text-primary font-bold mt-0.5">•</span>
-                Relevant utbildning och/eller erfarenhet inom skogsindustrin
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-primary font-bold mt-0.5">•</span>
-                Driv och engagemang för att leverera resultat
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-primary font-bold mt-0.5">•</span>
-                God kommunikationsförmåga och samarbetsvilja
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-primary font-bold mt-0.5">•</span>
-                Intresse för att utvecklas och ta sig an nya utmaningar
-              </li>
-            </ul>
           </div>
         </div>
       </section>
