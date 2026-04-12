@@ -17,7 +17,7 @@ const benefits = [
   {
     icon: Briefcase,
     title: "Varierande uppdrag",
-    description: "Arbeta med spännande och utmanande projekt hos ledande aktörer inom skogsnäringen.",
+    description: "Inventeringar, analyser och rådgivning i skogliga miljöer.",
   },
   {
     icon: MapPin,
