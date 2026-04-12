@@ -38,8 +38,7 @@ const CareerPage = () => {
             Karriär hos Beverskog Consulting
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Vill du vara en del av ett växande konsultbolag med djupa rötter i skogsindustrin? 
-            Vi söker alltid efter kompetenta och engagerade personer som vill göra skillnad.
+            Arbetet omfattar allt från inventeringar och naturvärdesbedömningar till rådgivning och analys i skogliga miljöer, ofta i sammanhang där olika intressen behöver vägas mot varandra.
           </p>
         </div>
       </section>
