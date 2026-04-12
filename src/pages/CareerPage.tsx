@@ -12,7 +12,7 @@ const benefits = [
   {
     icon: Users,
     title: "Starkt nätverk",
-    description: "Få tillgång till ett brett nätverk av kunder och branschexperter inom skogsindustrin.",
+    description: "Arbeta nära kunder och experter inom skog, naturvård och ekologi.",
   },
   {
     icon: Briefcase,
