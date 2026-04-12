@@ -79,9 +79,27 @@ const CareerPage = () => {
             Vem söker vi?
           </h2>
           <div className="bg-card rounded-2xl p-8 shadow-sm border border-border/50">
-            <p className="text-muted-foreground leading-relaxed">
-              Inventeringar, analyser och rådgivning i skogliga miljöer.
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Vi söker personer med intresse och kompetens inom skog, ekologi och naturmiljöer. Oavsett om din bakgrund är inom skogsekologi, skogsbruk, artkunskap eller närliggande områden vill vi gärna komma i kontakt med dig.
             </p>
+            <ul className="space-y-3 text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold mt-0.5">•</span>
+                Relevant utbildning och/eller erfarenhet inom skog, ekologi eller naturvård
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold mt-0.5">•</span>
+                Engagemang och noggrannhet i ditt arbete
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold mt-0.5">•</span>
+                Förmåga att arbeta självständigt och i samarbeten
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold mt-0.5">•</span>
+                Nyfikenhet och vilja att utvecklas
+              </li>
+            </ul>
           </div>
         </div>
       </section>
