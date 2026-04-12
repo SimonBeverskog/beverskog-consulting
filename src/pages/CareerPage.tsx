@@ -7,7 +7,7 @@ const benefits = [
   {
     icon: TrendingUp,
     title: "Professionell utveckling",
-    description: "Vi investerar i din karriär genom kontinuerlig kompetensutveckling och mentorskap.",
+    description: "Utveckla din kompetens inom skogsekologi, skogsbruk, artkunskap och biologisk mångfald.",
   },
   {
     icon: Users,
