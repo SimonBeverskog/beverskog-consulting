@@ -1,4 +1,4 @@
-import { TreePine, Bird, Leaf, Map, FileCheck, Shield, BookOpen } from "lucide-react";
+import { TreePine, Bird, Leaf, Map, FileCheck, Shield, BookOpen, Building2 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export interface Service {
@@ -152,5 +152,25 @@ export const services: Service[] = [
     ],
     whyHireMeOutro:
       "Genom att investera i utbildning via Beverskog Consulting bygger din organisation ett starkare förtroende hos myndigheter, kunder och allmänhet.",
+  },
+  {
+    icon: Building2,
+    title: "MKB & exploateringsunderlag",
+    slug: "mkb-exploateringsunderlag",
+    description:
+      "Miljökonsekvensbeskrivningar och naturvärdesbedömningar inför exploatering, byggnation och infrastrukturprojekt.",
+    longDescription:
+      "Miljökonsekvensbeskrivning (MKB) är ett centralt verktyg i plan- och tillståndsprocesser och syftar till att identifiera, beskriva och bedöma de miljöeffekter som en planerad verksamhet eller åtgärd kan medföra. I samband med exploatering – exempelvis bostadsbyggande, vägdragningar, vindkraftsetableringar eller industrietableringar – krävs ofta en grundlig utredning av hur naturmiljön påverkas. Det handlar om att kartlägga förekomst av skyddade arter, värdefulla biotoper, ekologiska samband och ekosystemtjänster i det berörda området. Exploateringsunderlag kan omfatta naturvärdesinventeringar, artskyddsbedömningar, hydrologiska analyser och landskapsekologiska konsekvensanalyser. Syftet är att ge beslutsfattare ett välgrundat underlag som gör det möjligt att minimera negativ miljöpåverkan, planera kompensationsåtgärder och uppfylla krav i miljöbalken, plan- och bygglagen och EU-direktiv. En väl genomförd MKB minskar risken för överklaganden, förseningar och kostsamma omtag i projektprocessen.",
+    whyHireMeIntro:
+      "Beverskog Consulting levererar MKB och exploateringsunderlag med ekologisk spetskompetens och praktisk förståelse för projektprocesser.",
+    whyHireMeBullets: [
+      "Gedigen fältkompetens inom naturvärdesbedömningar, artskydd och landskapsekologi – ett heltäckande ekologiskt underlag",
+      "Tydliga och välstrukturerade rapporter som håller för myndighetsgranskning och miljöprövningar",
+      "Proaktiv identifiering av ekologiska risker som hjälper dig undvika förseningar och kostsamma överklaganden",
+      "Erfarenhet av att samverka med projektörer, planarkitekter och myndigheter i komplexa exploateringsprojekt",
+      "Konkreta förslag på skydds- och kompensationsåtgärder som balanserar projektets mål med naturvårdens krav",
+    ],
+    whyHireMeOutro:
+      "Med ett professionellt MKB-underlag från Beverskog Consulting kan du driva ditt projekt framåt med trygghet – och visa att exploatering och naturvård kan gå hand i hand.",
   },
 ];
