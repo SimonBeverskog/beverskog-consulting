@@ -1,4 +1,4 @@
-import { TreePine, Bird, Leaf, Map, FileCheck, Shield, BookOpen } from "lucide-react";
+import { TreePine, Bird, Leaf, Map, FileCheck, Shield, BookOpen, Building2 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export interface Service {
