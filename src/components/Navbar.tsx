@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "@/assets/logo.svg";
 
 const navLinks = [
@@ -14,13 +14,34 @@ const navLinks = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, onClick?: () => void) => {
+    if (location.pathname !== "/") {
+      e.preventDefault();
+      const hash = href.startsWith("#") ? href.slice(1) : href;
+      navigate("/", { state: { scrollTo: hash } });
+      onClick?.();
+    } else {
+      onClick?.();
+    }
+  };
 
   const renderLink = (link: typeof navLinks[0], onClick?: () => void) => {
     const className = "text-sm font-medium text-foreground/70 hover:text-primary transition-colors duration-200";
     if (link.isRoute) {
       return <Link to={link.href} className={className} onClick={onClick}>{link.label}</Link>;
     }
-    return <a href={link.href} className={className} onClick={onClick}>{link.label}</a>;
+    return (
+      <a
+        href={link.href}
+        className={className}
+        onClick={(e) => handleHashClick(e, link.href, onClick)}
+      >
+        {link.label}
+      </a>
+    );
   };
 
   return (
