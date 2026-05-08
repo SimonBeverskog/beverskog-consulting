@@ -18,9 +18,12 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in-up">
-          Skoglig expertis för hållbara beslut
+        <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-2 animate-fade-in-up">
+          Beverskog Consulting AB
         </h1>
+        <p className="text-xl md:text-2xl lg:text-3xl text-secondary/90 mb-6 animate-fade-in-up font-medium">
+          Skoglig expertis för hållbara beslut
+        </p>
         <p className="text-lg md:text-xl text-secondary/80 max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
           Naturvärdesinventering, fågelinventeringar och artskydd som ger säkra beslutsunderlag för skogsbruk och exploatering.
         </p>
