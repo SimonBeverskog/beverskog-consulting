@@ -4,6 +4,7 @@ import clientHolmen from "@/assets/client-holmen.webp";
 import clientMellanskog from "@/assets/client-mellanskog.png";
 import clientSca from "@/assets/client-sca.png";
 import clientLudvig from "@/assets/client-ludvig.png";
+import clientOsterfarneboTorv from "@/assets/client-osterfarnebo-torv.png";
 
 const clients = [
   { name: "Uppsala Akademiförvaltning", logo: clientUaf },
@@ -11,6 +12,7 @@ const clients = [
   { name: "Mellanskog", logo: clientMellanskog },
   { name: "SCA", logo: clientSca },
   { name: "Ludvig & Co", logo: clientLudvig },
+  { name: "Österfärnebo Torv", logo: clientOsterfarneboTorv },
 ];
 
 const ClientsSection = () => {
