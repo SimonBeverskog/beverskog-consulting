@@ -1,5 +1,4 @@
 import { Linkedin } from "lucide-react";
-import logo from "@/assets/beverskog-logo.png";
 
 const Footer = () => {
   return (
