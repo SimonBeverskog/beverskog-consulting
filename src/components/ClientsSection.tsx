@@ -5,8 +5,8 @@ import clientMellanskog from "@/assets/client-mellanskog.png";
 import clientSca from "@/assets/client-sca.png";
 import clientLudvig from "@/assets/client-ludvig.png";
 import clientOsterfarneboTorv from "@/assets/client-osterfarnebo-torv.png";
-import clientSigma from "@/assets/client-sigma.png.asset.json";
-import clientEon from "@/assets/client-eon.png.asset.json";
+import clientSigma from "@/assets/client-sigma.png";
+import clientEon from "@/assets/client-eon.png";
 
 const clients = [
   { name: "Uppsala Akademiförvaltning", logo: clientUaf },
@@ -15,8 +15,8 @@ const clients = [
   { name: "SCA", logo: clientSca },
   { name: "Ludvig & Co", logo: clientLudvig },
   { name: "Österfärnebo Torv", logo: clientOsterfarneboTorv },
-  { name: "E.ON", logo: clientEon.url },
-  { name: "Sigma Energy & Marine", logo: clientSigma.url },
+  { name: "E.ON", logo: clientEon },
+  { name: "Sigma Energy & Marine", logo: clientSigma },
 ];
 
 const ClientsSection = () => {
