@@ -16,7 +16,7 @@ const clients = [
   { name: "Ludvig & Co", logo: clientLudvig },
   { name: "Österfärnebo Torv", logo: clientOsterfarneboTorv },
   { name: "E.ON", logo: clientEon.url },
-  { name: "Sigma Energy & Marine", logo: clientSigma.url, darkBg: true },
+  { name: "Sigma Energy & Marine", logo: clientSigma.url },
 ];
 
 const ClientsSection = () => {
@@ -60,11 +60,7 @@ const ClientsSection = () => {
               }`}
               style={{ transitionDelay: isVisible ? `${index * 150}ms` : "0ms" }}
             >
-              <div
-                className={`w-40 md:w-48 h-14 md:h-16 flex items-center justify-center rounded-md ${
-                  (client as { darkBg?: boolean }).darkBg ? "bg-foreground/85 px-3" : ""
-                }`}
-              >
+              <div className="w-40 md:w-48 h-14 md:h-16 flex items-center justify-center">
                 <img
                   src={client.logo}
                   alt={client.name}
