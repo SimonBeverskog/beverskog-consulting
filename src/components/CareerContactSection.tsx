@@ -43,34 +43,39 @@ const CareerContactSection = () => {
 
     setIsSubmitting(true);
     try {
-      const timestamp = Date.now();
-      const safeName = form.name.replace(/[^a-zA-Z0-9åäöÅÄÖ]/g, "_");
+      const fileToBase64 = (file: File) =>
+        new Promise<string>((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => {
+            const result = reader.result as string;
+            // Strip the "data:...;base64," prefix
+            resolve(result.includes(",") ? result.split(",")[1] : result);
+          };
+          reader.onerror = () => reject(reader.error);
+          reader.readAsDataURL(file);
+        });
 
-      // Upload CV
-      const cvPath = `${safeName}_${timestamp}/cv_${cvFile.name}`;
-      const { error: cvError } = await supabase.storage
-        .from("career-applications")
-        .upload(cvPath, cvFile);
-      if (cvError) throw cvError;
+      const cvBase64 = await fileToBase64(cvFile);
+      const coverLetterBase64 = coverLetterFile ? await fileToBase64(coverLetterFile) : null;
 
-      // Upload cover letter if provided
-      let coverLetterPath: string | undefined;
-      if (coverLetterFile) {
-        coverLetterPath = `${safeName}_${timestamp}/brev_${coverLetterFile.name}`;
-        const { error: clError } = await supabase.storage
-          .from("career-applications")
-          .upload(coverLetterPath, coverLetterFile);
-        if (clError) throw clError;
-      }
-
-      // Send email via edge function
+      // Edge function handles upload (server-generated path) and email
       const { error } = await supabase.functions.invoke("send-career-application", {
         body: {
           name: form.name,
           email: form.email,
           phone: form.phone,
-          cvPath,
-          coverLetterPath,
+          cv: {
+            name: cvFile.name,
+            contentType: cvFile.type,
+            contentBase64: cvBase64,
+          },
+          coverLetter: coverLetterFile && coverLetterBase64
+            ? {
+                name: coverLetterFile.name,
+                contentType: coverLetterFile.type,
+                contentBase64: coverLetterBase64,
+              }
+            : undefined,
         },
       });
       if (error) throw error;
