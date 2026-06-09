@@ -63,7 +63,7 @@ ${message}
 
     if (!res.ok) {
       console.error("Resend error:", data);
-      throw new Error(`Failed to send email: ${JSON.stringify(data)}`);
+      throw new Error("EMAIL_SEND_FAILED");
     }
 
     return new Response(JSON.stringify({ success: true }), {
@@ -72,8 +72,7 @@ ${message}
     });
   } catch (error: unknown) {
     console.error("Error sending contact email:", error);
-    const errorMessage = error instanceof Error ? error.message : "Unknown error";
-    return new Response(JSON.stringify({ error: errorMessage }), {
+    return new Response(JSON.stringify({ error: "Meddelandet kunde inte skickas. Försök igen senare." }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
