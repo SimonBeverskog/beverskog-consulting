@@ -4,6 +4,9 @@ import projectReforestation from "@/assets/project-reforestation.jpg";
 import projectWetland from "@/assets/project-wetland.jpg";
 import projectBiodiversity from "@/assets/project-biodiversity.jpg";
 import projectImpact from "@/assets/project-impact.jpg";
+import projectWoodpecker from "@/assets/project-woodpecker.jpg";
+import projectForestProtection from "@/assets/project-forest-protection.jpg";
+import projectPowerline from "@/assets/project-powerline.jpg";
 
 const projects = [
   {
