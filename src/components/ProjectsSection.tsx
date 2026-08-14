@@ -14,7 +14,7 @@ const projects = [
     title: "Fågelinventeringar med hög precision",
     description:
       "Genomförde en omfattande fågelinventering inom ett större skogsinnehav som underlag inför planerade avverkningar. Arbetet omfattade systematisk kartläggning av häckande arter och identifiering av områden med särskilda naturvärden.",
-    result: "gtLevererade tydliga rekommendationer och hänsynsförslag som möjliggjorde skogsbruksåtgärder i linje med artskyddet och en långsiktigt bevarad biologisk mångfald.",
+    result: "Levererade tydliga rekommendationer och hänsynsförslag som möjliggjorde skogsbruksåtgärder i linje med artskyddet och en långsiktigt bevarad biologisk mångfald.",
   },
   {
     image: projectReforestation,
@@ -50,6 +50,27 @@ const projects = [
     description:
       "Genomförde en integrerad bedömning av naturvärden inför etablering av vindkraft i ett skogslandskap samt inventering av en angränsande degraderad våtmark. Arbetet omfattade fältinventeringar av fåglar, fladdermöss och känsliga biotoper, hydrologisk analys, kartläggning av våtmarksarter samt bedömning av restaurerings- och etableringspotential.",
     result: "Kartlade planer som identifierade konfliktytor och föreslog placeringsalternativ för vindkraft med minimal påverkan på naturvärden, samtidigt som en restaureringsplan för våtmarken utformades som underlag för bidragsansökan och långsiktigt bevarande.",
+  },
+  {
+    image: projectForestProtection,
+    title: "Artskyddsutredning skogsbruk",
+    description:
+      "Genomförde en artskyddsutredning i ett skogsbruksområde med fokus på skyddade arter och deras livsmiljöer. Arbetet omfattade fältinventering, bedömning av påverkan från planerade skogsbruksåtgärder och förslag på hänsynstaganden.",
+    result: "Levererade ett tydligt beslutsunderlag som möjliggjorde skogsbruksåtgärder med fullgott artskydd och bevarade naturvärden.",
+  },
+  {
+    image: projectWoodpecker,
+    title: "Inventering av tretåig hackspett (Picoides tridactylus) och bedömning av livsmiljöer",
+    description:
+      "Genomförde en riktad inventering av tretåig hackspett inom fastigheten Vigge 1:23 i Sundsvalls kommun. Arbetet omfattade systematisk fältgenomsökning, livsmiljöbedömning och dokumentation av indirekta spår såsom ringhack och bohål.",
+    result: "Klassade områden utifrån livsmiljövärde och lämnade hänsynsrekommendationer som säkerställde skydd för arten vid fortsatt skogsbruk.",
+  },
+  {
+    image: projectPowerline,
+    title: "NVI - inventering för kraftledningar",
+    description:
+      "Utförde naturvärdesinventering (NVI) längs befintliga och planerade kraftledningssträckor i skogslandskap. Arbetet omfattade kartläggning av skyddade arter, nyckelbiotoper och känsliga naturvärden i påverkansområdet.",
+    result: "Levererade ett underlag som användes för att planera underhåll och nydragning med minimal påverkan på biologisk mångfald och skyddade miljöer.",
   },
 ];
 
