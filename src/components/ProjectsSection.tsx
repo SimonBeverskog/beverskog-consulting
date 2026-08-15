@@ -7,7 +7,8 @@ import projectImpact from "@/assets/project-impact.jpg";
 import projectWoodpecker from "@/assets/project-woodpecker.jpg";
 import projectForestProtection from "@/assets/project-forest-protection.jpg";
 import projectPowerline from "@/assets/project-powerline.jpg";
-import projectTjader from "@/assets/project-tjader.jpg.asset.json";
+import projectTjader from "@/assets/project-tjader.jpg";
+
 
 
 const projects = [
@@ -75,13 +76,14 @@ const projects = [
     result: "Levererade ett underlag som användes för att planera underhåll och nydragning med minimal påverkan på biologisk mångfald och skyddade miljöer.",
   },
   {
-    image: projectTjader.url,
+    image: projectTjader,
     title: "Inventering av tjäder och spelplatser",
     description:
       "Genomförde en inventering av tjäder (Tetrao urogallus) med avseende på spelplats inom ett skogsområde. Arbetet kombinerade spillningsinventering längs transekter med passiv akustisk övervakning via ljudbox under spelperioden.",
     result: "Bedömningen visade att tjäder förekom i området men i låg omfattning och utan tecken på etablerad spelplats, vilket gav ett tydligt beslutsunderlag för fortsatt skogsbruk och planering.",
   },
 ];
+
 
 
 const ProjectsSection = () => {
