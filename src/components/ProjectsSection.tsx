@@ -62,7 +62,7 @@ const projects = [
     image: projectWoodpecker,
     title: "Inventering av tretåig hackspett (Picoides tridactylus) och bedömning av livsmiljöer",
     description:
-      "Genomförde en riktad inventering av tretåig hackspett inom fastigheten Vigge 1:23 i Sundsvalls kommun. Arbetet omfattade systematisk fältgenomsökning, livsmiljöbedömning och dokumentation av indirekta spår såsom ringhack och bohål.",
+      "Genomförde en riktad inventering av tretåig hackspett inom Sundsvalls kommun. Arbetet omfattade systematisk fältgenomsökning, livsmiljöbedömning och dokumentation av indirekta spår såsom ringhack och bohål.",
     result: "Klassade områden utifrån livsmiljövärde och lämnade hänsynsrekommendationer som säkerställde skydd för arten vid fortsatt skogsbruk.",
   },
   {
