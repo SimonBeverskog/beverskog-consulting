@@ -53,7 +53,7 @@ const projects = [
   },
   {
     image: projectForestProtection,
-    title: "Artskyddsutredning skogsbruk",
+    title: "Artskyddsutredningar vid skogsbruksåtgärder",
     description:
       "Genomförde en artskyddsutredning i ett skogsbruksområde med fokus på skyddade arter och deras livsmiljöer. Arbetet omfattade fältinventering, bedömning av påverkan från planerade skogsbruksåtgärder och förslag på hänsynstaganden.",
     result: "Levererade ett tydligt beslutsunderlag som möjliggjorde skogsbruksåtgärder med fullgott artskydd och bevarade naturvärden.",
