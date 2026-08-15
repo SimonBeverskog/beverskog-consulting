@@ -7,6 +7,8 @@ import projectImpact from "@/assets/project-impact.jpg";
 import projectWoodpecker from "@/assets/project-woodpecker.jpg";
 import projectForestProtection from "@/assets/project-forest-protection.jpg";
 import projectPowerline from "@/assets/project-powerline.jpg";
+import projectTjader from "@/assets/project-tjader.jpg.asset.json";
+
 
 const projects = [
   {
