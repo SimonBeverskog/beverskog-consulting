@@ -1,128 +1,131 @@
-import projectTimber from "@/assets/project-timber.jpg";
-import projectConservation from "@/assets/project-conservation.jpg";
-import projectReforestation from "@/assets/project-reforestation.jpg";
-import projectWetland from "@/assets/project-wetland.jpg";
-import projectBiodiversity from "@/assets/project-biodiversity.jpg";
-import projectForestProtection from "@/assets/project-forest-protection.jpg";
-import projectWoodpecker from "@/assets/project-woodpecker.jpg";
-import projectPowerline from "@/assets/project-powerline.jpg";
-import projectTjader from "@/assets/project-tjader.jpg";
-
-
+import projectTimber from '@/assets/project-timber.jpg';
+import projectConservation from '@/assets/project-conservation.jpg';
+import projectReforestation from '@/assets/project-reforestation.jpg';
+import projectWetland from '@/assets/project-wetland.jpg';
+import projectBiodiversity from '@/assets/project-biodiversity.jpg';
+import projectForestProtection from '@/assets/project-forest-protection.jpg';
+import projectWoodpecker from '@/assets/project-woodpecker.jpg';
+import projectPowerline from '@/assets/project-powerline.jpg';
+import projectTjader from '@/assets/project-tjader.jpg';
 
 const projects = [
   {
     image: projectTimber,
-    title: "Fågelinventeringar med hög precision",
+    title: 'Fågelinventeringar med hög precision',
     description:
-      "Genomförde en omfattande fågelinventering inom ett större skogsinnehav som underlag inför planerade avverkningar. Arbetet omfattade systematisk kartläggning av häckande arter och identifiering av områden med särskilda naturvärden.",
-    result: "Levererade tydliga rekommendationer och hänsynsförslag som möjliggjorde skogsbruksåtgärder i linje med artskyddet och en långsiktigt bevarad biologisk mångfald.",
+      'Genomförde en omfattande fågelinventering inom ett större skogsinnehav som underlag inför planerade avverkningar. Arbetet omfattade systematisk kartläggning av häckande arter och identifiering av områden med särskilda naturvärden.',
+    result:
+      'Levererade tydliga rekommendationer och hänsynsförslag som möjliggjorde skogsbruksåtgärder i linje med artskyddet och en långsiktigt bevarad biologisk mångfald.',
   },
   {
     image: projectReforestation,
-    title: "Naturvärdesinventering som beslutsunderlag",
+    title: 'Naturvärdesinventering som beslutsunderlag',
     description:
-      "Genomförde en naturvärdesinventering i ett större skogsområde med fokus på att identifiera och avgränsa nyckelbiotoper. Arbetet omfattade fältbedömningar och dokumentation av strukturer och artförekomster.",
-    result: "Kartlade nyckelbiotoper och lämnade åtgärds- och hänsynsförslag som införlivades i bolagets skogsbruksplan.",
+      'Genomförde en naturvärdesinventering i ett större skogsområde med fokus på att identifiera och avgränsa nyckelbiotoper. Arbetet omfattade fältbedömningar och dokumentation av strukturer och artförekomster.',
+    result:
+      'Kartlade nyckelbiotoper och lämnade åtgärds- och hänsynsförslag som införlivades i bolagets skogsbruksplan.',
   },
   {
     image: projectConservation,
-    title: "Artskyddsutredning vid exploatering",
+    title: 'Artskyddsutredning vid exploatering',
     description:
-      "Genomförde en artskyddsbedömning inför ett infrastrukturprojekt i skogsmark med dokumenterade naturvärden. Arbetet omfattade fältkontroller, bedömning av skyddade arter och analys av potentiell påverkan.",
-    result: "Säkerställde att projektet kunde genomföras med korrekta hänsynsåtgärder och utan negativ påverkan på skyddade arter.",
+      'Genomförde en artskyddsbedömning inför ett infrastrukturprojekt i skogsmark med dokumenterade naturvärden. Arbetet omfattade fältkontroller, bedömning av skyddade arter och analys av potentiell påverkan.',
+    result:
+      'Säkerställde att projektet kunde genomföras med korrekta hänsynsåtgärder och utan negativ påverkan på skyddade arter.',
   },
   {
     image: projectWetland,
-    title: "Våtmarksinventering och restaureringsplan",
+    title: 'Våtmarksinventering och restaureringsplan',
     description:
-      "Utförde en inventering av en degraderad våtmark i anslutning till skogsmark, med fokus på hydrologiska förutsättningar och förekomst av våtmarksarter. Arbetet inkluderade bedömning av restaureringspotential.",
-    result: "Levererade en restaureringsplan som låg till grund för markägarens ansökan om bidrag för våtmarksåterställning.",
+      'Utförde en inventering av en degraderad våtmark i anslutning till skogsmark, med fokus på hydrologiska förutsättningar och förekomst av våtmarksarter. Arbetet inkluderade bedömning av restaureringspotential.',
+    result:
+      'Levererade en restaureringsplan som låg till grund för markägarens ansökan om bidrag för våtmarksåterställning.',
   },
   {
     image: projectBiodiversity,
-    title: "FSC- och PEFC-anpassad nyckelbiotopsbedömning",
+    title: 'FSC- och PEFC-anpassad nyckelbiotopsbedömning',
     description:
-      "Genomförde omfattande nyckelbiotopsbedömningar med fältinventering, artidentifiering och analys av ekologiska strukturer. Arbetet utfördes rutinmässigt enligt både FSC:s och PEFC:s krav och integrerades i skogsbrukets planering och hänsynstagande.",
-    result: "Tydliga beslutsunderlag som säkerställde korrekt naturhänsyn och uppfyllande av certifieringskraven.",
-  },
-  {
-    image: projectImpact,
-    title: "Miljökonsekvensbedömning och våtmarksrestaurering",
-    description:
-      "Genomförde en integrerad bedömning av naturvärden inför etablering av vindkraft i ett skogslandskap samt inventering av en angränsande degraderad våtmark. Arbetet omfattade fältinventeringar av fåglar, fladdermöss och känsliga biotoper, hydrologisk analys, kartläggning av våtmarksarter samt bedömning av restaurerings- och etableringspotential.",
-    result: "Kartlade planer som identifierade konfliktytor och föreslog placeringsalternativ för vindkraft med minimal påverkan på naturvärden, samtidigt som en restaureringsplan för våtmarken utformades som underlag för bidragsansökan och långsiktigt bevarande.",
+      'Genomförde omfattande nyckelbiotopsbedömningar med fältinventering, artidentifiering och analys av ekologiska strukturer. Arbetet utfördes rutinmässigt enligt både FSC:s och PEFC:s krav och integrerades i skogsbrukets planering och hänsynstagande.',
+    result:
+      'Tydliga beslutsunderlag som säkerställde korrekt naturhänsyn och uppfyllande av certifieringskraven.',
   },
   {
     image: projectForestProtection,
-    title: "Artskyddsutredningar vid skogsbruksåtgärder",
+    title: 'Artskyddsutredningar vid skogsbruksåtgärder',
     description:
-      "Genomförde en artskyddsutredning i ett skogsbruksområde med fokus på skyddade arter och deras livsmiljöer. Arbetet omfattade fältinventering, bedömning av påverkan från planerade skogsbruksåtgärder och förslag på hänsynstaganden.",
-    result: "Levererade ett tydligt beslutsunderlag som möjliggjorde skogsbruksåtgärder med fullgott artskydd och bevarade naturvärden.",
+      'Genomförde en artskyddsutredning i ett skogsbruksområde med fokus på skyddade arter och deras livsmiljöer. Arbetet omfattade fältinventering, bedömning av påverkan från planerade skogsbruksåtgärder och förslag på hänsynstaganden.',
+    result:
+      'Levererade ett tydligt beslutsunderlag som möjliggjorde skogsbruksåtgärder med fullgott artskydd och bevarade naturvärden.',
   },
   {
     image: projectWoodpecker,
-    title: "Inventering av tretåig hackspett (Picoides tridactylus) och bedömning av livsmiljöer",
+    title:
+      'Inventering av tretåig hackspett (Picoides tridactylus) och bedömning av livsmiljöer',
     description:
-      "Genomförde en riktad inventering av tretåig hackspett inom Sundsvalls kommun. Arbetet omfattade systematisk fältgenomsökning, livsmiljöbedömning och dokumentation av indirekta spår såsom ringhack och bohål.",
-    result: "Klassade områden utifrån livsmiljövärde och lämnade hänsynsrekommendationer som säkerställde skydd för arten vid fortsatt skogsbruk.",
+      'Genomförde en riktad inventering av tretåig hackspett inom Sundsvalls kommun. Arbetet omfattade systematisk fältgenomsökning, livsmiljöbedömning och dokumentation av indirekta spår såsom ringhack och bohål.',
+    result:
+      'Klassade områden utifrån livsmiljövärde och lämnade hänsynsrekommendationer som säkerställde skydd för arten vid fortsatt skogsbruk.',
   },
   {
     image: projectPowerline,
-    title: "Naturvärdesinventering vid ny- och ombyggnad av kraftledningar",
+    title: 'Naturvärdesinventering vid ny- och ombyggnad av kraftledningar',
     description:
-      "Utförde naturvärdesinventering (NVI) längs befintliga och planerade kraftledningssträckor i skogslandskap. Arbetet omfattade kartläggning av skyddade arter, nyckelbiotoper och känsliga naturvärden i påverkansområdet.",
-    result: "Levererade ett underlag som användes för att planera underhåll och nydragning med minimal påverkan på biologisk mångfald och skyddade miljöer.",
+      'Utförde naturvärdesinventering (NVI) längs befintliga och planerade kraftledningssträckor i skogslandskap. Arbetet omfattade kartläggning av skyddade arter, nyckelbiotoper och känsliga naturvärden i påverkansområdet.',
+    result:
+      'Levererade ett underlag som användes för att planera underhåll och nydragning med minimal påverkan på biologisk mångfald och skyddade miljöer.',
   },
   {
     image: projectTjader,
-    title: "Inventering av tjäder och spelplatser",
+    title: 'Inventering av tjäder och spelplatser',
     description:
-      "Genomförde en inventering av tjäder (Tetrao urogallus) med avseende på spelplats inom ett skogsområde. Arbetet kombinerade spillningsinventering längs transekter med passiv akustisk övervakning via ljudbox under spelperioden.",
-    result: "Bedömningen visade att tjäder förekom i området men i låg omfattning och utan tecken på etablerad spelplats, vilket gav ett tydligt beslutsunderlag för fortsatt skogsbruk och planering.",
+      'Genomförde en inventering av tjäder (Tetrao urogallus) med avseende på spelplats inom ett skogsområde. Arbetet kombinerade spillningsinventering längs transekter med passiv akustisk övervakning via ljudbox under spelperioden.',
+    result:
+      'Bedömningen visade att tjäder förekom i området men i låg omfattning och utan tecken på etablerad spelplats, vilket gav ett tydligt beslutsunderlag för fortsatt skogsbruk och planering.',
   },
 ];
 
-
-
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-20 md:py-28 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <p className="text-sm font-semibold tracking-widest text-accent uppercase mb-2 font-body">
+    <section id='projects' className='py-20 md:py-28 bg-background'>
+      <div className='container mx-auto px-4'>
+        <div className='text-center mb-16'>
+          <p className='text-sm font-semibold tracking-widest text-accent uppercase mb-2 font-body'>
             Mitt arbete
           </p>
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
+          <h2 className='font-heading text-3xl md:text-4xl font-bold text-foreground'>
             Projekt & uppdrag
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className='grid md:grid-cols-3 gap-8'>
           {projects.map((project) => (
             <div
               key={project.title}
-              className="group bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-xl border border-border/50 transition-all duration-300 hover:-translate-y-1"
+              className='group bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-xl border border-border/50 transition-all duration-300 hover:-translate-y-1'
             >
-              <div className="overflow-hidden h-56">
+              <div className='overflow-hidden h-56'>
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  loading="lazy"
+                  className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+                  loading='lazy'
                 />
               </div>
-              <div className="p-6">
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
+              <div className='p-6'>
+                <h3 className='font-heading text-xl font-semibold text-foreground mb-3'>
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4 font-body">
+                <p className='text-muted-foreground text-sm leading-relaxed mb-4 font-body'>
                   {project.description}
                 </p>
-                <div className="border-t border-border pt-4">
-                  <p className="text-sm font-body">
-                    <span className="font-semibold text-primary">Resultat:</span>{" "}
-                    <span className="text-muted-foreground">{project.result}</span>
+                <div className='border-t border-border pt-4'>
+                  <p className='text-sm font-body'>
+                    <span className='font-semibold text-primary'>
+                      Resultat:
+                    </span>{' '}
+                    <span className='text-muted-foreground'>
+                      {project.result}
+                    </span>
                   </p>
                 </div>
               </div>
