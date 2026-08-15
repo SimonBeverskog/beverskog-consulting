@@ -74,7 +74,15 @@ const projects = [
       "Utförde naturvärdesinventering (NVI) längs befintliga och planerade kraftledningssträckor i skogslandskap. Arbetet omfattade kartläggning av skyddade arter, nyckelbiotoper och känsliga naturvärden i påverkansområdet.",
     result: "Levererade ett underlag som användes för att planera underhåll och nydragning med minimal påverkan på biologisk mångfald och skyddade miljöer.",
   },
+  {
+    image: projectTjader.url,
+    title: "Inventering av tjäder och spelplatser",
+    description:
+      "Genomförde en inventering av tjäder (Tetrao urogallus) med avseende på spelplats inom ett skogsområde. Arbetet kombinerade spillningsinventering längs transekter med passiv akustisk övervakning via ljudbox under spelperioden.",
+    result: "Bedömningen visade att tjäder förekom i området men i låg omfattning och utan tecken på etablerad spelplats, vilket gav ett tydligt beslutsunderlag för fortsatt skogsbruk och planering.",
+  },
 ];
+
 
 const ProjectsSection = () => {
   return (
