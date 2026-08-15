@@ -67,7 +67,7 @@ const projects = [
   },
   {
     image: projectPowerline,
-    title: "NVI - inventering för kraftledningar",
+    title: "Naturvärdesinventering vid ny- och ombyggnad av kraftledningar",
     description:
       "Utförde naturvärdesinventering (NVI) längs befintliga och planerade kraftledningssträckor i skogslandskap. Arbetet omfattade kartläggning av skyddade arter, nyckelbiotoper och känsliga naturvärden i påverkansområdet.",
     result: "Levererade ett underlag som användes för att planera underhåll och nydragning med minimal påverkan på biologisk mångfald och skyddade miljöer.",
