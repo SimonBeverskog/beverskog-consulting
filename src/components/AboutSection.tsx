@@ -26,13 +26,16 @@ const AboutSection = () => {
               Om mig
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4 font-body">
-              Jag heter Lynx Beverskog och driver Beverskog Consulting AB. Jag är skogligt utbildad med kandidatexamen i skogsvetenskap och har flera års erfarenhet som naturvårdsspecialist på Holmen Skog. Min bakgrund omfattar även virkesköp och traktplanering vilket ger mig en bred och praktisk förståelse för skogsbrukets hela verksamhet.
+              Jag är skogsvetare och specialist inom fågelinventeringar, artskydd och naturvård i skogslandskap. Genom Beverskog Consulting AB hjälper jag skogsbolag, markägare, energibolag och konsulter att hantera naturvärden och artskyddsfrågor med hög biologisk kompetens och god förståelse för verksamhetens praktiska förutsättningar.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4 font-body">
-              Jag är utbildad inom Naturvärdesinventering (NVI) och nyckelbiotoper och arbetar professionellt med naturvård och artskydd i skogen. Min spetskompetens är fågelinventeringar där jag under många år varit ledande i metodik, kvalitetssäkring och artkunskap. Jag utför även andra typer av artinventeringar och naturvärdesanalyser med hög precision.
+              Tidigare har jag arbetat som naturvårdsspecialist på Holmen Skog och har även erfarenhet av virkesköp och skoglig planering. Det ger mig en ovanlig kombination av kunskap inom både naturvård och operativt skogsbruk.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4 font-body">
+              Min spetskompetens ligger inom fåglar och artskydd, där jag genomfört inventeringar, analyser och bedömningar för allt från skogsbruk och infrastruktur till exploateringsprojekt. Jag arbetar även med naturvärdesinventeringar (NVI), nyckelbiotopsbedömningar och andra ekologiska utredningar där tillförlitliga beslutsunderlag är avgörande.
             </p>
             <p className="text-muted-foreground leading-relaxed font-body">
-              Beverskog Consulting AB erbjuder skoglig expertis och tillförlitliga beslutsunderlag för företag som behöver stöd i naturvårdsfrågor, planering eller skogsrelaterade projekt där både produktion och naturvärden behöver vägas samman.
+              Jag levererar inte bara inventeringsresultat, utan beslutsunderlag som hjälper mina uppdragsgivare att minimera risker, möta lagkrav och samtidigt skapa långsiktigt hållbara lösningar.
             </p>
           </div>
         </div>
