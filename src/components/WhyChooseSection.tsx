@@ -120,5 +120,6 @@ const WhyChooseSection = () => {
       </div>
     </section>
   );
+};
 
 export default WhyChooseSection;
