@@ -118,9 +118,6 @@ const WhyChooseSection = () => {
 
           <div className="mt-14 md:mt-18 text-center">
             <div className="bg-primary rounded-2xl px-8 py-10 md:px-12 md:py-12 text-primary-foreground shadow-lg">
-              <h3 className="font-heading text-2xl md:text-3xl font-bold mb-3">
-                Vill du veta mer om hur jag kan hjälpa dig?
-              </h3>
               <p className="font-body text-primary-foreground/80 max-w-2xl mx-auto mb-6 md:mb-8">
                 Hör av dig för ett första samtal. Jag återkommer så snart jag kan.
               </p>
