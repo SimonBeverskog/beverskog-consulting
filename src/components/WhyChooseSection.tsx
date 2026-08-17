@@ -116,9 +116,9 @@ const WhyChooseSection = () => {
             ))}
           </div>
 
+        </div>
+      </div>
     </section>
   );
-  );
-};
 
 export default WhyChooseSection;
