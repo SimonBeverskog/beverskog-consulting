@@ -116,27 +116,8 @@ const WhyChooseSection = () => {
             ))}
           </div>
 
-          <div className="mt-14 md:mt-18 text-center">
-            <div className="bg-primary rounded-2xl px-8 py-10 md:px-12 md:py-12 text-primary-foreground shadow-lg">
-              <p className="font-body text-primary-foreground/80 max-w-2xl mx-auto mb-6 md:mb-8">
-                Hör av dig för ett första samtal. Jag återkommer så snart jag kan.
-              </p>
-              <Button
-                asChild
-                size="lg"
-                variant="secondary"
-                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-body font-semibold"
-              >
-                <a href="#contact">
-                  Kontakta mig
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
+  );
   );
 };
 
