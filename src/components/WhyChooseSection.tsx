@@ -62,9 +62,12 @@ const WhyChooseSection = () => {
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground leading-[1.05] mb-5">
               Därför anlitar kunder Beverskog Consulting AB
             </h2>
-            <p className="text-muted-foreground font-body text-base md:text-lg leading-relaxed">
+            <p className="text-muted-foreground font-body text-base md:text-lg leading-relaxed mb-6">
               En sammansvetsad kombination av biologisk expertis, skoglig erfarenhet och fokus på tydliga leveranser.
             </p>
+            <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
+              Vill du veta mer om hur jag kan hjälpa dig?
+            </h3>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
