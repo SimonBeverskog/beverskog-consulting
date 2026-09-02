@@ -1,4 +1,5 @@
 import { Bird, Trees, ShieldCheck, FileCheck, Handshake, Building2, Quote } from "lucide-react";
+import fieldOwl from "@/assets/field-owl.jpg";
 
 const reasons = [
   {
