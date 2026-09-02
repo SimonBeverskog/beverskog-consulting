@@ -1,4 +1,5 @@
 import { Bird, Trees, ShieldCheck, FileCheck, Handshake, Building2, Quote } from "lucide-react";
+import fieldOwl from "@/assets/field-owl.jpg";
 
 const reasons = [
   {
@@ -52,21 +53,35 @@ const WhyChooseSection = () => {
     <section id="why-us" className="py-24 md:py-32 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-14 md:mb-16">
-            <p className="inline-flex items-center gap-3 text-xs font-semibold tracking-[0.25em] text-accent uppercase mb-4 font-body">
-              <span className="w-8 h-px bg-accent" />
-              Förtroende & kvalitet
-              <span className="w-8 h-px bg-accent" />
-            </p>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground leading-[1.05] mb-5">
-              Därför anlitar kunder Beverskog Consulting AB
-            </h2>
-            <p className="text-muted-foreground font-body text-base md:text-lg leading-relaxed mb-6">
-              En sammansvetsad kombination av biologisk expertis, skoglig erfarenhet och fokus på tydliga leveranser.
-            </p>
-            <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-              Vill du veta mer om hur jag kan hjälpa dig?
-            </h3>
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center mb-14 md:mb-16">
+            <div className="text-center md:text-left">
+              <p className="inline-flex items-center justify-center md:justify-start gap-3 text-xs font-semibold tracking-[0.25em] text-accent uppercase mb-4 font-body">
+                <span className="w-8 h-px bg-accent" />
+                Förtroende & kvalitet
+                <span className="w-8 h-px bg-accent" />
+              </p>
+              <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground leading-[1.05] mb-5">
+                Därför anlitar kunder Beverskog Consulting AB
+              </h2>
+              <p className="text-muted-foreground font-body text-base md:text-lg leading-relaxed mb-6">
+                En sammansvetsad kombination av biologisk expertis, skoglig erfarenhet och fokus på tydliga leveranser.
+              </p>
+              <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
+                Vill du veta mer om hur jag kan hjälpa dig?
+              </h3>
+            </div>
+            <div className="relative">
+              <div className="overflow-hidden rounded-2xl shadow-xl">
+                <img
+                  src={fieldOwl}
+                  alt="Uggla i gran"
+                  className="w-full h-[400px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-lg -z-10" />
+              <div className="absolute -top-4 -left-4 w-32 h-32 bg-accent/10 rounded-lg -z-10" />
+            </div>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
