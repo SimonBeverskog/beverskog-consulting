@@ -11,8 +11,11 @@ const ServicesSection = () => {
             Vad jag erbjuder
           </p>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
-            Tjänster
+            Tjänster inom naturvärdesinventering, fågelinventering och artskydd
           </h2>
+          <p className="text-muted-foreground font-body max-w-2xl mx-auto mt-4 leading-relaxed">
+            Som naturvårdskonsult levererar jag inventeringar, artskyddsutredningar och skoglig rådgivning som ger säkrare beslutsunderlag, minskade risker och efterlevnad av lagkrav samt certifiering enligt FSC och PEFC.
+          </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">

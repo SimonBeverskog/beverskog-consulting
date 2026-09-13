@@ -25,11 +25,11 @@ const HeroSection = () => {
           Skoglig expertis för hållbara beslut
         </p>
         <p className="text-lg md:text-xl text-secondary/80 max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-          Naturvärdesinventering, fågelinventeringar och artskydd som ger säkra beslutsunderlag för skogsbruk och exploatering.
+          Naturvärdesinventering, fågelinventering och artskyddsutredning som ger säkra beslutsunderlag, minskade risker och smidigare tillståndsprocesser för skogsbruk och exploatering i hela Sverige.
         </p>
         <div className="animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
           <Button variant="hero" size="lg" asChild>
-            <a href="#contact">Kontakta mig</a>
+            <a href="#contact">Begär offert</a>
           </Button>
         </div>
       </div>
