@@ -9,7 +9,7 @@ const TopCtaSection = () => {
           Vill du veta mer om hur jag kan hjälpa dig?
         </h2>
         <p className="font-body text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-          Hör av dig för ett första samtal. Jag återkommer så snart jag kan.
+          Beskriv ditt projekt så återkommer jag med förslag på upplägg, tidplan och offert – oavsett om det gäller naturvärdesinventering, fågelinventering eller artskyddsutredning.
         </p>
         <Button
           asChild
@@ -18,7 +18,7 @@ const TopCtaSection = () => {
           className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-body font-semibold"
         >
           <a href="#contact">
-            Kontakta mig
+            Diskutera ditt projekt
             <ArrowRight className="ml-2 h-4 w-4" />
           </a>
         </Button>
