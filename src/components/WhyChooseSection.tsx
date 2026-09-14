@@ -64,7 +64,9 @@ const WhyChooseSection = () => {
                 Därför anlitar kunder Beverskog Consulting AB
               </h2>
               <p className="text-muted-foreground font-body text-base md:text-lg leading-relaxed mb-6">
-                En sammansvetsad kombination av biologisk expertis, skoglig erfarenhet och fokus på tydliga leveranser.
+                Som naturvårdskonsult och skogsvetare kombinerar jag biologisk expertis inom fåglar, artskydd och
+                biologisk mångfald med praktisk skoglig erfarenhet. Resultatet är säkrare beslutsunderlag, minskade
+                risker och effektivare tillståndsprocesser.
               </p>
               <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
                 Vill du veta mer om hur jag kan hjälpa dig?

@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CareerContactSection from "@/components/CareerContactSection";
+import PageMeta from "@/components/PageMeta";
 import { Briefcase, Users, TrendingUp, MapPin } from "lucide-react";
 
 const benefits = [
@@ -29,6 +30,10 @@ const benefits = [
 const CareerPage = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageMeta
+        title="Karriär – jobba med naturvärdesinventering | Beverskog Consulting AB"
+        description="Vill du arbeta med naturvärdesinventering, fågelinventering och artskydd? Skicka in CV och personligt brev till Beverskog Consulting AB."
+      />
       <Navbar />
 
       {/* Hero */}
