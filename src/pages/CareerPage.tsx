@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CareerContactSection from "@/components/CareerContactSection";
+import PageMeta from "@/components/PageMeta";
 import { Briefcase, Users, TrendingUp, MapPin } from "lucide-react";
 
 const benefits = [
