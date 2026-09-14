@@ -11,10 +11,14 @@ Uppdragen ger säkra beslutsunderlag för skogsbolag, markägare, exploatörer, 
 
 ## Tjänster
 
-- [Naturvärdesinventering](/tjanster/naturvardesinventering): NVI enligt standard, naturvärdesbedömning och nyckelbiotoper.
+- [Naturvärdesinventering](/tjanster/naturvardesinventering): NVI, naturvärdesbedömning och beslutsunderlag.
 - [Fågelinventeringar](/tjanster/fagelinventeringar): Riktade inventeringar av bland annat tjäder, hackspettar och rovfåglar.
-- [Artskyddsutredning](/tjanster/artskyddsutredning): Bedömningar enligt artskyddsförordningen inför skogsbruk och exploatering.
-- [Skoglig rådgivning](/tjanster/skoglig-radgivning): Rådgivning om naturhänsyn, planering och certifierat skogsbruk.
+- [Artinventeringar](/tjanster/artinventeringar): Artskyddsutredningar och inventering av skyddsvärda arter.
+- [Nyckelbiotoper](/tjanster/nyckelbiotoper): Bedömning av nyckelbiotoper och höga naturvärden.
+- [Hänsynsförslag](/tjanster/hansynsforslag): Praktiska naturhänsynsförslag vid skogsbruksåtgärder.
+- [Strategisk rådgivning](/tjanster/strategisk-radgivning): Skoglig rådgivning kring naturvård, FSC och PEFC.
+- [Utbildningar](/tjanster/utbildningar): Utbildning inom artkunskap, naturvård och artskydd.
+- [MKB & exploateringsunderlag](/tjanster/mkb-exploateringsunderlag): Underlag för miljökonsekvensbeskrivning och tillståndsprocesser.
 
 ## Kontakt
 
