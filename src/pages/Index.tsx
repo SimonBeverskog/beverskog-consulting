@@ -48,8 +48,8 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
-        <TopCtaSection />
         <AboutSection />
+        <TopCtaSection />
         <ServicesSection />
         <ClientsSection />
         <ClientTypesSection />
