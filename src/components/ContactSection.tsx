@@ -41,11 +41,15 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="text-sm font-semibold tracking-widest text-accent uppercase mb-2 font-body">
-            Hör av dig
+            Begär offert
           </p>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
             Kontakt
           </h2>
+          <p className="text-muted-foreground font-body mt-4 max-w-2xl mx-auto leading-relaxed">
+            Beskriv ditt projekt så återkommer jag med förslag på upplägg, tidplan och pris för
+            naturvärdesinventering, fågelinventering, artskyddsutredning eller skoglig rådgivning.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 max-w-5xl mx-auto">
@@ -83,7 +87,7 @@ const ContactSection = () => {
             </div>
             <div>
               <Textarea
-                placeholder="Hur kan jag hjälpa dig?"
+                placeholder="Berätta kort om ditt projekt – område, omfattning och tidplan"
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 required
@@ -99,7 +103,7 @@ const ContactSection = () => {
                   Skickar...
                 </> :
 
-              "Skicka meddelande"
+              "Begär offert"
               }
             </Button>
           </form>
