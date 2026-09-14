@@ -30,6 +30,10 @@ const benefits = [
 const CareerPage = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageMeta
+        title="Karriär – jobba med naturvärdesinventering | Beverskog Consulting AB"
+        description="Vill du arbeta med naturvärdesinventering, fågelinventering och artskydd? Skicka in CV och personligt brev till Beverskog Consulting AB."
+      />
       <Navbar />
 
       {/* Hero */}
