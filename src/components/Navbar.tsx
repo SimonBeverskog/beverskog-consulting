@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "@/assets/beverskog-logo.png";
 
@@ -56,6 +56,15 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <li key={link.href}>{renderLink(link)}</li>
           ))}
+          <li>
+            <a
+              href="tel:+46708896588"
+              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-200"
+            >
+              <Phone className="w-4 h-4" />
+              070-889 65 88
+            </a>
+          </li>
         </ul>
 
         <button
@@ -73,6 +82,15 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <li key={link.href}>{renderLink(link, () => setOpen(false))}</li>
             ))}
+            <li>
+              <a
+                href="tel:+46708896588"
+                className="inline-flex items-center gap-2 text-sm font-medium text-primary"
+              >
+                <Phone className="w-4 h-4" />
+                070-889 65 88
+              </a>
+            </li>
           </ul>
         </div>
       )}
