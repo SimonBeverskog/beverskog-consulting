@@ -119,6 +119,16 @@ const ServicePage = () => {
               {service.longDescription}
             </p>
 
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <Button size="lg" onClick={scrollToContact}>
+                Begär offert
+                <ArrowDown className="ml-2 w-4 h-4" />
+              </Button>
+              <Button size="lg" variant="outline" onClick={scrollToContact}>
+                Kontakta mig för rådgivning
+              </Button>
+            </div>
+
             {extra?.benefits && (
               <div className="bg-secondary/40 rounded-lg p-6 md:p-8 border border-border/50">
                 <h2 className="font-heading text-xl md:text-2xl font-bold text-foreground mb-4">
