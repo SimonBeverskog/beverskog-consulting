@@ -47,18 +47,46 @@ const ServicePage = () => {
         description={extra?.metaDescription ?? service.description}
         jsonLd={{
           "@context": "https://schema.org",
-          "@type": "Service",
-          name: service.title,
-          serviceType: service.title,
-          description: extra?.metaDescription ?? service.description,
-          areaServed: "SE",
-          url: `https://beverskog.com/tjanster/${service.slug}`,
-          provider: {
-            "@type": "ProfessionalService",
-            name: "Beverskog Consulting AB",
-            url: "https://beverskog.com/",
-            email: "lynx@beverskog.com",
-          },
+          "@graph": [
+            {
+              "@type": "Service",
+              name: service.title,
+              serviceType: service.title,
+              description: extra?.metaDescription ?? service.description,
+              areaServed: "SE",
+              url: `https://beverskog.com/tjanster/${service.slug}`,
+              provider: {
+                "@type": "ProfessionalService",
+                name: "Beverskog Consulting AB",
+                url: "https://beverskog.com/",
+                email: "lynx@beverskog.com",
+                telephone: "+46708896588",
+              },
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Start",
+                  item: "https://beverskog.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Tjänster",
+                  item: "https://beverskog.com/#services",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: service.title,
+                  item: `https://beverskog.com/tjanster/${service.slug}`,
+                },
+              ],
+            },
+          ],
         }}
       />
       <Navbar />
