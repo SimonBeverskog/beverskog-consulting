@@ -7,6 +7,9 @@ import projectForestProtection from '@/assets/project-forest-protection.jpg';
 import projectWoodpecker from '@/assets/project-woodpecker.jpg';
 import projectPowerline from '@/assets/project-powerline.jpg';
 import projectTjader from '@/assets/project-tjader.jpg';
+import projectBranning from '@/assets/project-bränning.jpg';
+import projectArt skydd from '@/assets/project-artskydd-2.jpg';
+import projectHogaNaturvarden from '@/assets/project-hoga-naturvarden.jpg';
 
 const projects = [
   {
