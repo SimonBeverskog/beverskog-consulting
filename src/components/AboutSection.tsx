@@ -1,4 +1,4 @@
-import aboutImage from "@/assets/about-field.jpg";
+import personImage from "@/assets/lynx-personbild.jpg.asset.json";
 
 const AboutSection = () => {
   return (
