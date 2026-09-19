@@ -85,6 +85,30 @@ const projects = [
     result:
       'Bedömningen visade att tjäder förekom i området men i låg omfattning och utan tecken på etablerad spelplats, vilket gav ett tydligt beslutsunderlag för fortsatt skogsbruk och planering.',
   },
+  {
+    image: projectBranning,
+    title: 'Planering av naturvårdsbränning',
+    description:
+      'Planerade en naturvårdsbränning i ett skogsbestånd med höga naturvärden. Arbetet omfattade bedömning av bränningsobjekt, väderleks- och spridningsrisk, förberedelser av brandgränser samt dokumentation av rättsliga krav och kontaktvägar.',
+    result:
+      'Levererade en genomarbetad bränningsplan som gav markägaren förutsättningar för en säker genomförd bränning med tydliga naturvårdseffekter och efterlevnad av lagkrav.',
+  },
+  {
+    image: projectArtSkydd,
+    title: 'Artskyddsutredningar av skyddade arter',
+    description:
+      'Genomförde artskyddsutredningar med fokus på skyddade arter och deras livsmiljöer inför planerade åtgärder i skogsmark. Arbetet omfattade fältinventering, bedömning av påverkan på populationer och analyser av möjliga störnings- och fragmenteringseffekter.',
+    result:
+      'Levererade konkreta hänsyns- och skyddsåtgärder som möjliggjorde projektets genomförande i enlighet med artskyddsförordningen och säkrade fortsatt överlevnad för berörda arter.',
+  },
+  {
+    image: projectHogaNaturvarden,
+    title: 'Planering av skogliga åtgärder i skogar med höga naturvärden',
+    description:
+      'Planerade skogliga åtgärder i bestånd med höga naturvärden, där virkesuttag vägdes mot bevarande av biologisk mångfald. Arbetet omfattade naturvärdesbedömning, avgränsning av hänsynsytor och utformning av skötselåtgärder med hänsyn till nyckelbiotoper och skyddsvärda strukturer.',
+    result:
+      'Levererade en åtgärdsplan som kombinerade ekonomiskt skogsbruk med ett starkt naturhänsynstagande och uppfyllde både lagkrav och certifieringskrav enligt FSC och PEFC.',
+  },
 ];
 
 const ProjectsSection = () => {
