@@ -1,4 +1,4 @@
-import personImage from "@/assets/lynx-personbild.jpg.asset.json";
+import personImage from "@/assets/lynx-personbild.jpg";
 
 const AboutSection = () => {
   return (
@@ -8,7 +8,7 @@ const AboutSection = () => {
           <div className="relative">
             <div className="overflow-hidden rounded-lg shadow-xl">
               <img
-                src={personImage.url}
+                src={personImage}
                 alt="Lynx Beverskog i fält"
                 className="w-full h-[400px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy" />
