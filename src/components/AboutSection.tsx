@@ -8,10 +8,10 @@ const AboutSection = () => {
           <div className="relative">
             <div className="overflow-hidden rounded-lg shadow-xl">
               <img
-
+                src={personImage.url}
                 alt="Lynx Beverskog i fält"
                 className="w-full h-[400px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
-                loading="lazy" src="/lovable-uploads/a7c501af-6407-43b5-a802-e28ec24533fb.jpg" />
+                loading="lazy" />
 
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-lg -z-10" />
