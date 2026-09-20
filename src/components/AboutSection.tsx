@@ -9,7 +9,8 @@ const AboutSection = () => {
             <div className="overflow-hidden rounded-lg shadow-xl">
               <img
                 src={personImage}
-                alt="Lynx Beverskog i fält"
+                alt="Lynx Beverskog, skogsvetare och naturvårdskonsult, under fältarbete med inventering"
+                loading="lazy"
                 className="w-full h-[400px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy" />
 
