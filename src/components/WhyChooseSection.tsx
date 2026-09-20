@@ -77,7 +77,6 @@ const WhyChooseSection = () => {
                 <img
                   src={fieldOwl}
                   alt="Uggla i gran — exempel på skyddad art som beaktas vid artskyddsutredning"
-                  loading="lazy"
                   className="w-full h-[400px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
                   loading="lazy"
                 />
