@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Dimmig skogsvy i gryningen"
+          alt="Dimmig skogsvy i gryningen — skog med höga naturvärden och biologisk mångfald"
           className="w-full h-full object-cover"
           loading="eager" />
 
