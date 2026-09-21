@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import projectTimber from '@/assets/project-timber.jpg';
 import projectConservation from '@/assets/project-conservation.jpg';
 import projectReforestation from '@/assets/project-reforestation.jpg';
@@ -14,6 +16,8 @@ import projectHogaNaturvarden from '@/assets/project-hoga-naturvarden.jpg';
 const projects = [
   {
     image: projectTimber,
+    alt: 'Fågelinventering i skogslandskap inför planerade avverkningar',
+    serviceSlug: 'fagelinventeringar',
     title: 'Fågelinventeringar med hög precision',
     description:
       'Genomförde en omfattande fågelinventering inom ett större skogsinnehav som underlag inför planerade avverkningar. Arbetet omfattade systematisk kartläggning av häckande arter och identifiering av områden med särskilda naturvärden.',
@@ -22,6 +26,8 @@ const projects = [
   },
   {
     image: projectReforestation,
+    alt: 'Naturvärdesinventering (NVI) med identifiering av nyckelbiotoper',
+    serviceSlug: 'naturvardesinventering',
     title: 'Naturvärdesinventering som beslutsunderlag',
     description:
       'Genomförde en naturvärdesinventering i ett större skogsområde med fokus på att identifiera och avgränsa nyckelbiotoper. Arbetet omfattade fältbedömningar och dokumentation av strukturer och artförekomster.',
@@ -30,6 +36,8 @@ const projects = [
   },
   {
     image: projectConservation,
+    alt: 'Artskyddsutredning vid exploatering i skogsmark med naturvärden',
+    serviceSlug: 'artinventeringar',
     title: 'Artskyddsutredning vid exploatering',
     description:
       'Genomförde en artskyddsbedömning inför ett infrastrukturprojekt i skogsmark med dokumenterade naturvärden. Arbetet omfattade fältkontroller, bedömning av skyddade arter och analys av potentiell påverkan.',
@@ -38,6 +46,8 @@ const projects = [
   },
   {
     image: projectWetland,
+    alt: 'Våtmarksinventering med bedömning av restaureringspotential',
+    serviceSlug: 'hansynsforslag',
     title: 'Våtmarksinventering och restaureringsplan',
     description:
       'Utförde en inventering av en degraderad våtmark i anslutning till skogsmark, med fokus på hydrologiska förutsättningar och förekomst av våtmarksarter. Arbetet inkluderade bedömning av restaureringspotential.',
@@ -46,6 +56,8 @@ const projects = [
   },
   {
     image: projectBiodiversity,
+    alt: 'Nyckelbiotopsbedömning enligt FSC och PEFC i skogsbruk',
+    serviceSlug: 'nyckelbiotoper',
     title: 'FSC- och PEFC-anpassad nyckelbiotopsbedömning',
     description:
       'Genomförde omfattande nyckelbiotopsbedömningar med fältinventering, artidentifiering och analys av ekologiska strukturer. Arbetet utfördes rutinmässigt enligt både FSC:s och PEFC:s krav och integrerades i skogsbrukets planering och hänsynstagande.',
@@ -54,6 +66,8 @@ const projects = [
   },
   {
     image: projectForestProtection,
+    alt: 'Artskyddsutredning av skyddade arter vid skogsbruksåtgärder',
+    serviceSlug: 'artinventeringar',
     title: 'Artskyddsutredningar vid skogsbruksåtgärder',
     description:
       'Genomförde en artskyddsutredning i ett skogsbruksområde med fokus på skyddade arter och deras livsmiljöer. Arbetet omfattade fältinventering, bedömning av påverkan från planerade skogsbruksåtgärder och förslag på hänsynstaganden.',
@@ -62,6 +76,8 @@ const projects = [
   },
   {
     image: projectWoodpecker,
+    alt: 'Inventering av tretåig hackspett i Sundsvalls kommun',
+    serviceSlug: 'artinventeringar',
     title:
       'Inventering av tretåig hackspett (Picoides tridactylus) och bedömning av livsmiljöer',
     description:
@@ -71,6 +87,8 @@ const projects = [
   },
   {
     image: projectPowerline,
+    alt: 'Naturvärdesinventering längs kraftledningssträcka i skogslandskap',
+    serviceSlug: 'naturvardesinventering',
     title: 'Naturvärdesinventering vid ny- och ombyggnad av kraftledningar',
     description:
       'Utförde naturvärdesinventering (NVI) längs befintliga och planerade kraftledningssträckor i skogslandskap. Arbetet omfattade kartläggning av skyddade arter, nyckelbiotoper och känsliga naturvärden i påverkansområdet.',
@@ -79,6 +97,8 @@ const projects = [
   },
   {
     image: projectTjader,
+    alt: 'Tjäderinventering med spillningsinventering och akustisk övervakning',
+    serviceSlug: 'fagelinventeringar',
     title: 'Inventering av tjäder och spelplatser',
     description:
       'Genomförde en inventering av tjäder (Tetrao urogallus) med avseende på spelplats inom ett skogsområde. Arbetet kombinerade spillningsinventering längs transekter med passiv akustisk övervakning via ljudbox under spelperioden.',
@@ -87,6 +107,8 @@ const projects = [
   },
   {
     image: projectBranning,
+    alt: 'Naturvårdsbränning i skogsbestånd med höga naturvärden',
+    serviceSlug: 'hansynsforslag',
     title: 'Planering av naturvårdsbränning',
     description:
       'Planerade en naturvårdsbränning i ett skogsbestånd med höga naturvärden. Arbetet omfattade bedömning av bränningsobjekt, väderleks- och spridningsrisk, förberedelser av brandgränser samt dokumentation av rättsliga krav och kontaktvägar.',
@@ -95,6 +117,8 @@ const projects = [
   },
   {
     image: projectArtSkydd,
+    alt: 'Artskyddsutredning av skyddade arter och deras livsmiljöer i skogsmark',
+    serviceSlug: 'artinventeringar',
     title: 'Artskyddsutredningar av skyddade arter',
     description:
       'Genomförde artskyddsutredningar med fokus på skyddade arter och deras livsmiljöer inför planerade åtgärder i skogsmark. Arbetet omfattade fältinventering, bedömning av påverkan på populationer och analyser av möjliga störnings- och fragmenteringseffekter.',
@@ -103,6 +127,8 @@ const projects = [
   },
   {
     image: projectHogaNaturvarden,
+    alt: 'Tallskog med lavar och död ved — skog med höga naturvärden',
+    serviceSlug: 'strategisk-radgivning',
     title: 'Planering av skogliga åtgärder i skogar med höga naturvärden',
     description:
       'Planerade skogliga åtgärder i bestånd med höga naturvärden, där virkesuttag vägdes mot bevarande av biologisk mångfald. Arbetet omfattade naturvärdesbedömning, avgränsning av hänsynsytor och utformning av skötselåtgärder med hänsyn till nyckelbiotoper och skyddsvärda strukturer.',
@@ -120,8 +146,11 @@ const ProjectsSection = () => {
             Mitt arbete
           </p>
           <h2 className='font-heading text-3xl md:text-4xl font-bold text-foreground'>
-            Projekt & uppdrag
+            Projekt & uppdrag inom naturvärdesinventering, fågelinventering och artskydd
           </h2>
+          <p className='text-muted-foreground font-body max-w-2xl mx-auto mt-4 leading-relaxed'>
+            Exempel på genomförda uppdrag — från nyckelbiotopsbedömningar och artskyddsutredningar till inventeringar av tretåig hackspett och tjäder — med säkra beslutsunderlag för skogsbruk och exploatering i hela Sverige.
+          </p>
         </div>
 
         <div className='grid md:grid-cols-3 gap-8'>
@@ -133,7 +162,7 @@ const ProjectsSection = () => {
               <div className='overflow-hidden h-56'>
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={project.alt}
                   className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
                   loading='lazy'
                 />
@@ -154,6 +183,12 @@ const ProjectsSection = () => {
                       {project.result}
                     </span>
                   </p>
+                  <Link
+                    to={`/tjanster/${project.serviceSlug}`}
+                    className='inline-flex items-center gap-1 text-sm font-medium text-primary mt-4 hover:underline'
+                  >
+                    Läs mer om tjänsten <ArrowRight className='w-4 h-4' />
+                  </Link>
                 </div>
               </div>
             </div>
