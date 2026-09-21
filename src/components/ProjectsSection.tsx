@@ -146,8 +146,11 @@ const ProjectsSection = () => {
             Mitt arbete
           </p>
           <h2 className='font-heading text-3xl md:text-4xl font-bold text-foreground'>
-            Projekt & uppdrag
+            Projekt & uppdrag inom naturvärdesinventering, fågelinventering och artskydd
           </h2>
+          <p className='text-muted-foreground font-body max-w-2xl mx-auto mt-4 leading-relaxed'>
+            Exempel på genomförda uppdrag — från nyckelbiotopsbedömningar och artskyddsutredningar till inventeringar av tretåig hackspett och tjäder — med säkra beslutsunderlag för skogsbruk och exploatering i hela Sverige.
+          </p>
         </div>
 
         <div className='grid md:grid-cols-3 gap-8'>
@@ -159,7 +162,7 @@ const ProjectsSection = () => {
               <div className='overflow-hidden h-56'>
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={project.alt}
                   className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
                   loading='lazy'
                 />
@@ -180,6 +183,12 @@ const ProjectsSection = () => {
                       {project.result}
                     </span>
                   </p>
+                  <Link
+                    to={`/tjanster/${project.serviceSlug}`}
+                    className='inline-flex items-center gap-1 text-sm font-medium text-primary mt-4 hover:underline'
+                  >
+                    Läs mer om tjänsten <ArrowRight className='w-4 h-4' />
+                  </Link>
                 </div>
               </div>
             </div>
