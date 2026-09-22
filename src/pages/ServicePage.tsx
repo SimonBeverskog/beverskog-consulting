@@ -86,6 +86,21 @@ const ServicePage = () => {
                 },
               ],
             },
+            ...(extra?.faq
+              ? [
+                  {
+                    "@type": "FAQPage",
+                    mainEntity: extra.faq.map((item) => ({
+                      "@type": "Question",
+                      name: item.question,
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: item.answer,
+                      },
+                    })),
+                  },
+                ]
+              : []),
           ],
         }}
       />
