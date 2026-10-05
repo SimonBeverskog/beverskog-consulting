@@ -35,7 +35,7 @@ const ServicesSection = () => {
                 {service.description}
               </p>
               <span className="inline-flex items-center gap-1 text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                Läs mer <ArrowRight className="w-4 h-4" />
+                Läs mer om {service.title.toLowerCase()} <ArrowRight className="w-4 h-4" />
               </span>
             </Link>
           ))}
