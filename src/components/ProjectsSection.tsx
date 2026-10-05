@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { services } from '@/data/services';
 import projectTimber from '@/assets/project-timber.jpg';
 import projectConservation from '@/assets/project-conservation.jpg';
 import projectReforestation from '@/assets/project-reforestation.jpg';
@@ -165,6 +166,7 @@ const ProjectsSection = () => {
                   alt={project.alt}
                   className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
                   loading='lazy'
+                  decoding='async'
                 />
               </div>
               <div className='p-6'>
@@ -187,7 +189,7 @@ const ProjectsSection = () => {
                     to={`/tjanster/${project.serviceSlug}`}
                     className='inline-flex items-center gap-1 text-sm font-medium text-primary mt-4 hover:underline'
                   >
-                    Läs mer om tjänsten <ArrowRight className='w-4 h-4' />
+                    Läs mer om {services.find((s) => s.slug === project.serviceSlug)?.title.toLowerCase() ?? 'tjänsten'} <ArrowRight className='w-4 h-4' />
                   </Link>
                 </div>
               </div>
