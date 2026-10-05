@@ -12,7 +12,9 @@ const HeroSection = () => {
           src={heroImage}
           alt="Dimmig skogsvy i gryningen — skog med höga naturvärden och biologisk mångfald"
           className="w-full h-full object-cover"
-          loading="eager" />
+          loading="eager"
+          fetchPriority="high"
+          decoding="async" />
 
         <div className="absolute inset-0 bg-foreground/50" />
       </div>
