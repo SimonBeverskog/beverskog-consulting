@@ -115,8 +115,12 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-heading font-semibold text-foreground mb-1">E-post</h4>
-                <p className="text-muted-foreground text-sm font-body">Lynx@beverskog.com
-                </p>
+                <a
+                  href="mailto:lynx@beverskog.com"
+                  className="text-muted-foreground text-sm font-body hover:text-primary transition-colors"
+                >
+                  lynx@beverskog.com
+                </a>
               </div>
             </div>
 
@@ -126,7 +130,12 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-heading font-semibold text-foreground mb-1">Telefon</h4>
-                <p className="text-muted-foreground text-sm font-body">+46708896588</p>
+                <a
+                  href="tel:+46708896588"
+                  className="text-muted-foreground text-sm font-body hover:text-primary transition-colors"
+                >
+                  070-889 65 88
+                </a>
               </div>
             </div>
 
