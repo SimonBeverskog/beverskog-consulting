@@ -56,6 +56,7 @@ const ContactSection = () => {
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <Input
+                aria-label="Ditt namn"
                 placeholder="Ditt namn"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -67,6 +68,7 @@ const ContactSection = () => {
             <div>
               <Input
                 type="email"
+                aria-label="E-postadress"
                 placeholder="E-postadress"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -78,6 +80,7 @@ const ContactSection = () => {
             <div>
               <Input
                 type="tel"
+                aria-label="Telefonnummer"
                 placeholder="Telefonnummer"
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
@@ -87,6 +90,7 @@ const ContactSection = () => {
             </div>
             <div>
               <Textarea
+                aria-label="Berätta kort om ditt projekt"
                 placeholder="Berätta kort om ditt projekt – område, omfattning och tidplan"
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
