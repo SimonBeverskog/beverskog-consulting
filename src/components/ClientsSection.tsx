@@ -66,6 +66,7 @@ const ClientsSection = () => {
                   alt={client.name}
                   className="max-h-full max-w-full object-contain"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
