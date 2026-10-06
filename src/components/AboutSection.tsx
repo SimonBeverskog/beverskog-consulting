@@ -12,7 +12,8 @@ const AboutSection = () => {
                 src={personImage}
                 alt="Lynx Beverskog, skogsvetare och naturvårdskonsult, under fältarbete med inventering"
                 className="w-full h-[400px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
-                loading="lazy" />
+                loading="lazy"
+                decoding="async" />
 
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-lg -z-10" />
