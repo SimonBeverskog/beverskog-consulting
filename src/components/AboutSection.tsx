@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import personImage from "@/assets/lynx-personbild.jpg";
 
 const AboutSection = () => {
@@ -32,7 +33,11 @@ const AboutSection = () => {
               Tidigare har jag arbetat som naturvårdsspecialist på Holmen Skog och har även erfarenhet av virkesköp och skoglig planering. Det ger mig en ovanlig kombination av kunskap inom både naturvård och operativt skogsbruk.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4 font-body">
-              Min spetskompetens ligger inom fåglar och artskydd, där jag genomfört inventeringar, analyser och bedömningar för allt från skogsbruk och infrastruktur till exploateringsprojekt. Jag arbetar även med naturvärdesinventeringar (NVI), nyckelbiotopsbedömningar och andra ekologiska utredningar där tillförlitliga beslutsunderlag är avgörande.
+              Min spetskompetens ligger inom{" "}
+              <Link to="/tjanster/fagelinventeringar" className="text-primary hover:underline">fåglar</Link> och{" "}
+              <Link to="/tjanster/artinventeringar" className="text-primary hover:underline">artskydd</Link>, där jag genomfört inventeringar, analyser och bedömningar för allt från skogsbruk och infrastruktur till exploateringsprojekt. Jag arbetar även med{" "}
+              <Link to="/tjanster/naturvardesinventering" className="text-primary hover:underline">naturvärdesinventeringar (NVI)</Link>,{" "}
+              <Link to="/tjanster/nyckelbiotoper" className="text-primary hover:underline">nyckelbiotopsbedömningar</Link> och andra ekologiska utredningar där tillförlitliga beslutsunderlag är avgörande.
             </p>
             <p className="text-muted-foreground leading-relaxed font-body">
               Jag levererar inte bara inventeringsresultat, utan beslutsunderlag som hjälper mina uppdragsgivare att minimera risker, möta lagkrav och samtidigt skapa långsiktigt hållbara lösningar.
