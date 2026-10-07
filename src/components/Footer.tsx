@@ -46,7 +46,7 @@ const Footer = () => {
                 <a
                   href="https://www.linkedin.com/in/lynx-beverskog-22170415a/"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer me"
                   className="inline-flex items-center gap-2 hover:text-primary-foreground transition-colors duration-200"
                   aria-label="LinkedIn-profil"
                 >
