@@ -63,7 +63,7 @@ const ClientsSection = () => {
               <div className="w-40 md:w-48 h-14 md:h-16 flex items-center justify-center">
                 <img
                   src={client.logo}
-                  alt={client.name}
+                  alt={`${client.name} — uppdragsgivare till Beverskog Consulting`}
                   className="max-h-full max-w-full object-contain"
                   loading="lazy"
                   decoding="async"
