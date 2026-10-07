@@ -10,6 +10,7 @@ import ClientsSection from "@/components/ClientsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import PageMeta from "@/components/PageMeta";
+import FaqSection, { homeFaqs } from "@/components/FaqSection";
 
 
 const Index = () => {
@@ -18,7 +19,11 @@ const Index = () => {
       <PageMeta
         title="Naturvärdesinventering & fågelinventering | Beverskog Consulting AB"
         description="Naturvärdesinventering (NVI), fågelinventering och artskyddsutredning av skogsvetare med spetskompetens inom artskydd. Säkra beslutsunderlag för skogsbruk, exploatering, FSC och PEFC."
-        jsonLd={{
+        jsonLd={[{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: homeFaqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+        }, {
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
           name: "Beverskog Consulting AB",
@@ -43,7 +48,7 @@ const Index = () => {
             name: "Lynx Beverskog",
             jobTitle: "Skogsvetare och naturvårdskonsult",
           },
-        }}
+        }]}
       />
       <Navbar />
       <main>
@@ -55,6 +60,7 @@ const Index = () => {
         <ClientTypesSection />
         <ProjectsSection />
         <WhyChooseSection />
+        <FaqSection />
         <ContactSection />
       </main>
       <Footer />
