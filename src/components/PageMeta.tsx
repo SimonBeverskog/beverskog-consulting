@@ -6,7 +6,7 @@ interface PageMetaProps {
   title: string;
   description: string;
   /** Optional JSON-LD object rendered for this page */
-  jsonLd?: Record<string, unknown>;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const setMeta = (selector: string, attr: 'name' | 'property', key: string, value: string) => {
