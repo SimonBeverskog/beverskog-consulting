@@ -1,0 +1,1 @@
+- Build-time plugin vite-plugin-prerender-meta.ts writes per-route static HTML (title, description, canonical) for service pages and /karriar — why: Google and the static host see unique metadata and no 404 on direct links.

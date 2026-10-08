@@ -11,6 +11,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import PageMeta from "@/components/PageMeta";
 import FaqSection, { homeFaqs } from "@/components/FaqSection";
+import ProcessSection from "@/components/ProcessSection";
 
 
 const Index = () => {
@@ -59,6 +60,7 @@ const Index = () => {
         <ClientsSection />
         <ClientTypesSection />
         <ProjectsSection />
+        <ProcessSection />
         <WhyChooseSection />
         <FaqSection />
         <ContactSection />
