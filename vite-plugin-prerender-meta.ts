@@ -14,6 +14,8 @@ interface RoutePage {
   description: string;
   heading: string;
   body: string;
+  extraHtml?: string;
+  jsonLd?: unknown;
 }
 
 const pages = (): RoutePage[] => [
@@ -23,6 +25,37 @@ const pages = (): RoutePage[] => [
     description: x.metaDescription,
     heading: x.metaTitle.split("|")[0].trim(),
     body: x.intro,
+    extraHtml:
+      `<h2>Kundnytta</h2><ul>${x.benefits.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>` +
+      `<h2>Vanliga frågor</h2>${x.faq.map((f) => `<h3>${esc(f.question)}</h3><p>${esc(f.answer)}</p>`).join("")}` +
+      `<h2>Relaterade tjänster</h2><ul>${x.related
+        .filter((r) => serviceExtras[r])
+        .map((r) => `<li><a href="/tjanster/${r}">${esc(serviceExtras[r].metaTitle.split("|")[0].trim())}</a></li>`)
+        .join("")}</ul>`,
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          name: x.metaTitle.split("|")[0].trim(),
+          description: x.metaDescription,
+          url: `${SITE}/tjanster/${slug}`,
+          areaServed: "SE",
+          provider: { "@type": "ProfessionalService", name: "Beverskog Consulting AB", url: `${SITE}/`, telephone: "+46708896588" },
+        },
+        {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Hem", item: `${SITE}/` },
+            { "@type": "ListItem", position: 2, name: x.metaTitle.split("|")[0].trim(), item: `${SITE}/tjanster/${slug}` },
+          ],
+        },
+        {
+          "@type": "FAQPage",
+          mainEntity: x.faq.map((f) => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })),
+        },
+      ],
+    },
   })),
   {
     route: "/karriar",
@@ -63,8 +96,12 @@ export default function prerenderMeta(): Plugin {
           .replace(/(<link\s+rel="alternate"\s+hreflang="x-default"\s+href=")[^"]*(")/, `$1${url}$2`)
           .replace(
             '<div id="root"></div>',
-            `<div id="root"><main><h1>${esc(p.heading)}</h1><p>${esc(p.body)}</p><p><a href="/">Beverskog Consulting AB</a> · <a href="tel:+46708896588">070-889 65 88</a></p></main></div>`,
+            `<div id="root"><main><h1>${esc(p.heading)}</h1><p>${esc(p.body)}</p>${p.extraHtml ?? ""}<p><a href="/">Beverskog Consulting AB</a> · <a href="tel:+46708896588">070-889 65 88</a></p></main></div>`,
           );
+        if (p.jsonLd) {
+          const ld = JSON.stringify(p.jsonLd).replace(/</g, "\\u003c");
+          html = html.replace("</head>", `<script type="application/ld+json">${ld}</script></head>`);
+        }
         const dir = path.join(dist, p.route);
         fs.mkdirSync(dir, { recursive: true });
         fs.writeFileSync(path.join(dir, "index.html"), html);
