@@ -36,11 +36,15 @@ const pages = (): RoutePage[] => [
 
 /** Skriver statiska HTML-filer per route med rätt titel, beskrivning och canonical så att Google ser unik metadata utan att köra JavaScript. */
 export default function prerenderMeta(): Plugin {
+  let outDir = "dist";
   return {
     name: "prerender-meta",
     apply: "build",
+    configResolved(c) {
+      outDir = path.resolve(c.root, c.build.outDir);
+    },
     closeBundle() {
-      const dist = path.resolve(__dirname, "dist");
+      const dist = outDir;
       const base = fs.readFileSync(path.join(dist, "index.html"), "utf8");
       for (const p of pages()) {
         const url = `${SITE}${p.route}`;
