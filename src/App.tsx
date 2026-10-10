@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import Index from './pages/Index';
 import ServicePage from './pages/ServicePage';
+import ServicesPage from './pages/ServicesPage';
 import CareerPage from './pages/CareerPage';
 import NotFound from './pages/NotFound';
 import CanonicalUrl from './components/CanonicalUrl';
@@ -22,6 +23,7 @@ const App = () => (
         <CanonicalUrl />
         <Routes>
           <Route path='/' element={<Index />} />
+          <Route path='/tjanster' element={<ServicesPage />} />
           <Route path='/tjanster/:slug' element={<ServicePage />} />
           <Route path='/karriar' element={<CareerPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

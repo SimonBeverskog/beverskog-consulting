@@ -114,9 +114,9 @@ const ServicePage = () => {
               </li>
               <li aria-hidden="true">›</li>
               <li>
-                <button onClick={handleBackToServices} className="hover:text-primary transition-colors">
+                <Link to="/tjanster" className="hover:text-primary transition-colors">
                   Tjänster
-                </button>
+                </Link>
               </li>
               <li aria-hidden="true">›</li>
               <li className="text-foreground font-medium" aria-current="page">{service.title}</li>

@@ -59,6 +59,22 @@ const pages = (): RoutePage[] => [
     },
   })),
   {
+    route: "/tjanster",
+    title: "Tjänster – naturvärdesinventering, fågelinventering & artskydd | Beverskog Consulting AB",
+    description:
+      "Alla tjänster från Beverskog Consulting AB: naturvärdesinventering, fågelinventeringar, artskyddsutredning, nyckelbiotoper, hänsynsförslag, rådgivning, utbildning och MKB-underlag.",
+    heading: "Tjänster inom naturvård och skoglig rådgivning",
+    body: "Naturvärdesinventering, fågelinventering och artskyddsutredning som ger säkra beslutsunderlag för skogsbruk, exploatering och certifiering enligt FSC och PEFC.",
+    extraHtml: services
+      .map((s) => `<h2><a href="/tjanster/${s.slug}">${esc(s.title)}</a></h2><p>${esc(s.description)}</p>`)
+      .join(""),
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      itemListElement: services.map((s, i) => ({ "@type": "ListItem", position: i + 1, name: s.title, url: `${SITE}/tjanster/${s.slug}` })),
+    },
+  },
+  {
     route: "/karriar",
     title: "Karriär – jobba med naturvård | Beverskog Consulting AB",
     description:
