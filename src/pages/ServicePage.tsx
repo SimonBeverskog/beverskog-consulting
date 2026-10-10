@@ -107,6 +107,21 @@ const ServicePage = () => {
       <Navbar />
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 max-w-3xl">
+          <nav aria-label="Länkväg" className="mb-6">
+            <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground">
+              <li>
+                <Link to="/" className="hover:text-primary transition-colors">Hem</Link>
+              </li>
+              <li aria-hidden="true">›</li>
+              <li>
+                <button onClick={handleBackToServices} className="hover:text-primary transition-colors">
+                  Tjänster
+                </button>
+              </li>
+              <li aria-hidden="true">›</li>
+              <li className="text-foreground font-medium" aria-current="page">{service.title}</li>
+            </ol>
+          </nav>
           <button
             onClick={handleBackToServices}
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8"
