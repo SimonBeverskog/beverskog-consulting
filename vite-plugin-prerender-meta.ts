@@ -2,6 +2,8 @@ import fs from "fs";
 import path from "path";
 import type { Plugin } from "vite";
 import { serviceExtras } from "./src/data/serviceExtras";
+import { services } from "./src/data/services";
+import { homeFaqs } from "./src/components/FaqSection";
 
 const SITE = "https://beverskog.com";
 
