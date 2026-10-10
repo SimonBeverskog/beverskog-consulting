@@ -79,7 +79,22 @@ export default function prerenderMeta(): Plugin {
     },
     closeBundle() {
       const dist = outDir;
-      const base = fs.readFileSync(path.join(dist, "index.html"), "utf8");
+      const indexPath = path.join(dist, "index.html");
+      const base = fs.readFileSync(indexPath, "utf8");
+
+      // Startsidan: lägg in nyckelinnehåll direkt i HTML så Google ser det utan JavaScript.
+      const homeHtml =
+        `<main><h1>Beverskog Consulting AB</h1>` +
+        `<p>Skoglig expertis för hållbara beslut. Naturvärdesinventering, fågelinventeringar och artskydd som ger säkra beslutsunderlag för skogsbruk och exploatering.</p>` +
+        `<h2>Tjänster</h2><ul>${services
+          .map((s) => `<li><a href="/tjanster/${s.slug}">${esc(s.title)}</a> – ${esc(s.description)}</li>`)
+          .join("")}</ul>` +
+        `<p><a href="tel:+46708896588">070-889 65 88</a> · <a href="mailto:lynx@beverskog.com">lynx@beverskog.com</a></p></main>`;
+      fs.writeFileSync(
+        indexPath,
+        base.replace('<div id="root"></div>', `<div id="root">${homeHtml}</div>`),
+      );
+
       for (const p of pages()) {
         const url = `${SITE}${p.route}`;
         const t = esc(p.title);
