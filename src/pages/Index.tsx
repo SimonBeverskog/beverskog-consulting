@@ -14,14 +14,11 @@ import FaqSection from "@/components/FaqSection";
 import ProcessSection from "@/components/ProcessSection";
 import { homeFaqs } from "@/data/homeFaqs";
 import { homeGraph } from "@/lib/structuredData";
+import { HOME_DESCRIPTION, HOME_TITLE } from "@/data/site";
 
 // Organisation, person och webbplats ligger redan i sidhuvudet (index.html),
 // här läggs bara startsidans egna frågor till.
 const homeJsonLd = homeGraph(homeFaqs);
-
-export const HOME_TITLE = "Naturvärdesinventering, fågelinventering & artskydd | Beverskog Consulting AB";
-export const HOME_DESCRIPTION =
-  "Naturvårdskonsult och skogsvetare — naturvärdesinventering, fågelinventering, artskyddsutredning och skoglig rådgivning för säkra beslutsunderlag. FSC/PEFC, nyckelbiotoper och biologisk mångfald.";
 
 const Index = () => {
   return (

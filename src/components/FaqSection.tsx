@@ -43,4 +43,3 @@ const FaqSection = () => (
 
 export default FaqSection;
 
-export { homeFaqs };

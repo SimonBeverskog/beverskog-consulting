@@ -11,6 +11,11 @@ export const EMAIL = "lynx@beverskog.com";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/lynx-beverskog-22170415a/";
 export const LOGO_URL = `${SITE_URL}/favicon.png`;
 
+/** Startsidans titel och beskrivning – hålls i synk med index.html. */
+export const HOME_TITLE = "Naturvärdesinventering, fågelinventering & artskydd | Beverskog Consulting AB";
+export const HOME_DESCRIPTION =
+  "Naturvårdskonsult och skogsvetare — naturvärdesinventering, fågelinventering, artskyddsutredning och skoglig rådgivning för säkra beslutsunderlag. FSC/PEFC, nyckelbiotoper och biologisk mångfald.";
+
 export const ORG_ID = `${SITE_URL}/#organization`;
 export const PERSON_ID = `${SITE_URL}/#person`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
