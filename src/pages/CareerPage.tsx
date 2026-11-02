@@ -36,6 +36,7 @@ const CareerPage = () => {
       />
       <Navbar />
 
+      <main id="main">
       {/* Hero */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="container mx-auto px-4 text-center max-w-3xl">
@@ -110,6 +111,7 @@ const CareerPage = () => {
       </section>
 
       <CareerContactSection />
+      </main>
 
       <Footer />
     </div>
