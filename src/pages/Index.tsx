@@ -10,49 +10,25 @@ import ClientsSection from "@/components/ClientsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import PageMeta from "@/components/PageMeta";
-import FaqSection, { homeFaqs } from "@/components/FaqSection";
+import FaqSection from "@/components/FaqSection";
 import ProcessSection from "@/components/ProcessSection";
+import { homeFaqs } from "@/data/homeFaqs";
+import { homeGraph } from "@/lib/structuredData";
 
+// Organisation, person och webbplats ligger redan i sidhuvudet (index.html),
+// här läggs bara startsidans egna frågor till.
+const homeJsonLd = homeGraph(homeFaqs);
+
+export const HOME_TITLE = "Naturvärdesinventering, fågelinventering & artskydd | Beverskog Consulting AB";
+export const HOME_DESCRIPTION =
+  "Naturvårdskonsult och skogsvetare — naturvärdesinventering, fågelinventering, artskyddsutredning och skoglig rådgivning för säkra beslutsunderlag. FSC/PEFC, nyckelbiotoper och biologisk mångfald.";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <PageMeta
-        title="Naturvärdesinventering & fågelinventering | Beverskog Consulting AB"
-        description="Naturvärdesinventering (NVI), fågelinventering och artskyddsutredning av skogsvetare med spetskompetens inom artskydd. Säkra beslutsunderlag för skogsbruk, exploatering, FSC och PEFC."
-        jsonLd={[{
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: homeFaqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
-        }, {
-          "@context": "https://schema.org",
-          "@type": "ProfessionalService",
-          name: "Beverskog Consulting AB",
-          description:
-            "Naturvårdskonsult specialiserad på naturvärdesinventering, fågelinventering, artskyddsutredning och skoglig rådgivning i hela Sverige.",
-          url: "https://beverskog.com/",
-          email: "lynx@beverskog.com",
-          telephone: "+46708896588",
-          areaServed: "SE",
-          knowsAbout: [
-            "Naturvärdesinventering",
-            "Fågelinventering",
-            "Artskyddsutredning",
-            "Nyckelbiotoper",
-            "Biologisk mångfald",
-            "Skoglig rådgivning",
-            "FSC",
-            "PEFC",
-          ],
-          founder: {
-            "@type": "Person",
-            name: "Lynx Beverskog",
-            jobTitle: "Skogsvetare och naturvårdskonsult",
-          },
-        }]}
-      />
+      <PageMeta title={HOME_TITLE} description={HOME_DESCRIPTION} jsonLd={homeJsonLd} />
       <Navbar />
-      <main>
+      <main id="main">
         <HeroSection />
         <AboutSection />
         <TopCtaSection />

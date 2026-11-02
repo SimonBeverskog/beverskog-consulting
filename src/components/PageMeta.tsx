@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
-
-const SITE_NAME = 'Beverskog Consulting AB';
+import { COMPANY_NAME } from '@/data/site';
 
 interface PageMetaProps {
   title: string;
@@ -25,12 +24,17 @@ const PageMeta = ({ title, description, jsonLd }: PageMetaProps) => {
     setMeta('meta[name="description"]', 'name', 'description', description);
     setMeta('meta[property="og:title"]', 'property', 'og:title', title);
     setMeta('meta[property="og:description"]', 'property', 'og:description', description);
-    setMeta('meta[property="og:site_name"]', 'property', 'og:site_name', SITE_NAME);
+    setMeta('meta[property="og:site_name"]', 'property', 'og:site_name', COMPANY_NAME);
     setMeta('meta[name="twitter:title"]', 'name', 'twitter:title', title);
     setMeta('meta[name="twitter:description"]', 'name', 'twitter:description', description);
   }, [title, description]);
 
   useEffect(() => {
+    // Sidspecifik JSON-LD som byggsteget lagt in i HTML ersätts av appens
+    // version, så att samma data inte finns två gånger.
+    document.head
+      .querySelectorAll('script[type="application/ld+json"][data-prerender]')
+      .forEach((el) => el.remove());
     if (!jsonLd) return;
     const script = document.createElement('script');
     script.type = 'application/ld+json';
