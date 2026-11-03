@@ -78,8 +78,6 @@ const WhyChooseSection = () => {
                   src={fieldOwl}
                   alt="Uggla i gran — exempel på skyddad art som beaktas vid artskyddsutredning"
                   className="w-full h-[400px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
-                  width={1200}
-                  height={923}
                   loading="lazy"
                   decoding="async"
                 />

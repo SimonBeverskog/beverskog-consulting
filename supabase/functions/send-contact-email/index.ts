@@ -6,26 +6,12 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const LIMITS: Record<string, number> = {
-  name: 100,
-  organization: 150,
-  email: 255,
-  phone: 30,
-  assignmentType: 100,
-  area: 150,
-  plannedAction: 300,
-  extent: 100,
-  timeline: 100,
-  message: 2000,
-};
-
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-
-const json = (body: unknown, status = 200) =>
-  new Response(JSON.stringify(body), {
-    status,
-    headers: { ...corsHeaders, "Content-Type": "application/json" },
-  });
+interface ContactForm {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -33,27 +19,13 @@ serve(async (req) => {
   }
 
   try {
-    const raw = (await req.json()) as Record<string, unknown>;
+    const { name, email, phone, message }: ContactForm = await req.json();
 
-    // Dolt fält som bara robotar fyller i: svara "ok" utan att skicka något.
-    if (typeof raw.website === "string" && raw.website.trim() !== "") {
-      return json({ success: true });
-    }
-
-    const f: Record<string, string> = {};
-    for (const key of Object.keys(LIMITS)) {
-      const value = raw[key];
-      f[key] = typeof value === "string" ? value.trim() : "";
-      if (f[key].length > LIMITS[key]) {
-        return json({ error: `Fältet ${key} är för långt.` }, 400);
-      }
-    }
-
-    if (!f.name || !f.email || !f.message) {
-      return json({ error: "Namn, e-post och meddelande krävs." }, 400);
-    }
-    if (!EMAIL_RE.test(f.email)) {
-      return json({ error: "Ogiltig e-postadress." }, 400);
+    if (!name || !email || !message) {
+      return new Response(
+        JSON.stringify({ error: "Namn, e-post och meddelande krävs." }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
     }
 
     const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
@@ -61,26 +33,17 @@ serve(async (req) => {
       throw new Error("RESEND_API_KEY is not configured");
     }
 
-    const v = (s: string) => s || "Ej angivet";
     const emailBody = `
-Ny förfrågan från hemsidan:
+Nytt kontaktmeddelande från hemsidan:
 
-Namn: ${f.name}
-Organisation/företag: ${v(f.organization)}
-E-post: ${f.email}
-Telefon: ${v(f.phone)}
-
-Typ av uppdrag: ${v(f.assignmentType)}
-Kommun/område: ${v(f.area)}
-Planerad åtgärd: ${v(f.plannedAction)}
-Ungefärlig areal/sträckning: ${v(f.extent)}
-Önskad tidplan: ${v(f.timeline)}
+Namn: ${name}
+E-post: ${email}
+Telefon: ${phone || "Ej angivet"}
 
 Meddelande:
-${f.message}
+${message}
     `.trim();
 
-    const subjectType = f.assignmentType ? ` – ${f.assignmentType}` : "";
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -90,21 +53,28 @@ ${f.message}
       body: JSON.stringify({
         from: "Kontaktformulär <noreply@beverskog.com>",
         to: ["lynx@beverskog.com"],
-        subject: `Förfrågan från ${f.name}${subjectType}`.slice(0, 200),
+        subject: `Nytt meddelande från ${name}`,
         text: emailBody,
-        reply_to: f.email,
+        reply_to: email,
       }),
     });
 
+    const data = await res.json();
+
     if (!res.ok) {
-      const data = await res.text();
-      console.error(`Resend error [${res.status}]: ${data}`);
+      console.error("Resend error:", data);
       throw new Error("EMAIL_SEND_FAILED");
     }
 
-    return json({ success: true });
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
   } catch (error: unknown) {
     console.error("Error sending contact email:", error);
-    return json({ error: "Meddelandet kunde inte skickas. Försök igen senare." }, 500);
+    return new Response(JSON.stringify({ error: "Meddelandet kunde inte skickas. Försök igen senare." }), {
+      status: 500,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
   }
 });

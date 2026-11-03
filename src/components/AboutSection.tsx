@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import personImage from "@/assets/lynx-personbild.webp";
+import personImage from "@/assets/lynx-personbild.jpg";
 
 const AboutSection = () => {
   return (
@@ -12,8 +12,6 @@ const AboutSection = () => {
                 src={personImage}
                 alt="Lynx Beverskog, skogsvetare och naturvårdskonsult, under fältarbete med inventering"
                 className="w-full h-[400px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
-                width={1400}
-                height={933}
                 loading="lazy"
                 decoding="async" />
 

@@ -1,20 +1,20 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { services } from '@/data/services';
-import projectTimber from '@/assets/project-timber.webp';
-import projectConservation from '@/assets/project-conservation.webp';
-import projectReforestation from '@/assets/project-reforestation.webp';
-import projectWetland from '@/assets/project-wetland.webp';
-import projectBiodiversity from '@/assets/project-biodiversity.webp';
-import projectForestProtection from '@/assets/project-forest-protection.webp';
-import projectWoodpecker from '@/assets/project-woodpecker.webp';
-import projectPowerline from '@/assets/project-powerline.webp';
-import projectTjader from '@/assets/project-tjader.webp';
-import projectBranning from '@/assets/project-bränning.webp';
-import projectArtSkydd from '@/assets/project-artskydd-2.webp';
-import projectHogaNaturvarden from '@/assets/project-hoga-naturvarden.webp';
+import projectTimber from '@/assets/project-timber.jpg';
+import projectConservation from '@/assets/project-conservation.jpg';
+import projectReforestation from '@/assets/project-reforestation.jpg';
+import projectWetland from '@/assets/project-wetland.jpg';
+import projectBiodiversity from '@/assets/project-biodiversity.jpg';
+import projectForestProtection from '@/assets/project-forest-protection.jpg';
+import projectWoodpecker from '@/assets/project-woodpecker.jpg';
+import projectPowerline from '@/assets/project-powerline.jpg';
+import projectTjader from '@/assets/project-tjader.jpg';
+import projectBranning from '@/assets/project-bränning.jpg';
+import projectArtSkydd from '@/assets/project-artskydd-2.jpg';
+import projectHogaNaturvarden from '@/assets/project-hoga-naturvarden.jpg';
 
-export const projects = [
+const projects = [
   {
     image: projectTimber,
     alt: 'Fågelinventering i skogslandskap inför planerade avverkningar',
@@ -165,8 +165,6 @@ const ProjectsSection = () => {
                   src={project.image}
                   alt={project.alt}
                   className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
-                  width={800}
-                  height={533}
                   loading='lazy'
                   decoding='async'
                 />
