@@ -36,7 +36,7 @@ const ServicesPage = () => (
       }}
     />
     <Navbar />
-    <main id="main" className="pt-32 pb-20">
+    <main className="pt-32 pb-20">
       <div className="container mx-auto px-4 max-w-5xl">
         <nav aria-label="Länkväg" className="mb-6">
           <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground">
