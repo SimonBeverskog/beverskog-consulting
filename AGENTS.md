@@ -1,1 +1,2 @@
-- Build-time plugin vite-plugin-prerender-meta.ts writes per-route static HTML (title, description, canonical) for service pages and /karriar — why: Google and the static host see unique metadata and no 404 on direct links.
+- Build-time plugin vite-plugin-prerender-meta.ts writes per-route static HTML (title, description, canonical, main text, JSON-LD) for the home page, service pages, /tjanster and /karriar — why: Google and the static host see unique metadata and real content without JavaScript, and no 404 on direct links.
+- Text shown on the home page (projects, FAQ, process steps) lives as plain data in src/data/ with no image or React imports; components add images — why: the prerender plugin imports the same data so static HTML never drifts from the visible page.

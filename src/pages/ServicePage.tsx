@@ -69,14 +69,14 @@ const ServicePage = () => {
                 {
                   "@type": "ListItem",
                   position: 1,
-                  name: "Start",
+                  name: "Hem",
                   item: "https://beverskog.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Tjänster",
-                  item: "https://beverskog.com/#services",
+                  item: "https://beverskog.com/tjanster",
                 },
                 {
                   "@type": "ListItem",

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { services } from '@/data/services';
+import { projects } from '@/data/projects';
 import projectTimber from '@/assets/project-timber.jpg';
 import projectConservation from '@/assets/project-conservation.jpg';
 import projectReforestation from '@/assets/project-reforestation.jpg';
@@ -14,129 +15,21 @@ import projectBranning from '@/assets/project-bränning.jpg';
 import projectArtSkydd from '@/assets/project-artskydd-2.jpg';
 import projectHogaNaturvarden from '@/assets/project-hoga-naturvarden.jpg';
 
-const projects = [
-  {
-    image: projectTimber,
-    alt: 'Fågelinventering i skogslandskap inför planerade avverkningar',
-    serviceSlug: 'fagelinventeringar',
-    title: 'Fågelinventeringar med hög precision',
-    description:
-      'Genomförde en omfattande fågelinventering inom ett större skogsinnehav som underlag inför planerade avverkningar. Arbetet omfattade systematisk kartläggning av häckande arter och identifiering av områden med särskilda naturvärden.',
-    result:
-      'Levererade tydliga rekommendationer och hänsynsförslag som möjliggjorde skogsbruksåtgärder i linje med artskyddet och en långsiktigt bevarad biologisk mångfald.',
-  },
-  {
-    image: projectReforestation,
-    alt: 'Naturvärdesinventering (NVI) med identifiering av nyckelbiotoper',
-    serviceSlug: 'naturvardesinventering',
-    title: 'Naturvärdesinventering som beslutsunderlag',
-    description:
-      'Genomförde en naturvärdesinventering i ett större skogsområde med fokus på att identifiera och avgränsa nyckelbiotoper. Arbetet omfattade fältbedömningar och dokumentation av strukturer och artförekomster.',
-    result:
-      'Kartlade nyckelbiotoper och lämnade åtgärds- och hänsynsförslag som införlivades i bolagets skogsbruksplan.',
-  },
-  {
-    image: projectConservation,
-    alt: 'Artskyddsutredning vid exploatering i skogsmark med naturvärden',
-    serviceSlug: 'artinventeringar',
-    title: 'Artskyddsutredning vid exploatering',
-    description:
-      'Genomförde en artskyddsbedömning inför ett infrastrukturprojekt i skogsmark med dokumenterade naturvärden. Arbetet omfattade fältkontroller, bedömning av skyddade arter och analys av potentiell påverkan.',
-    result:
-      'Säkerställde att projektet kunde genomföras med korrekta hänsynsåtgärder och utan negativ påverkan på skyddade arter.',
-  },
-  {
-    image: projectWetland,
-    alt: 'Våtmarksinventering med bedömning av restaureringspotential',
-    serviceSlug: 'hansynsforslag',
-    title: 'Våtmarksinventering och restaureringsplan',
-    description:
-      'Utförde en inventering av en degraderad våtmark i anslutning till skogsmark, med fokus på hydrologiska förutsättningar och förekomst av våtmarksarter. Arbetet inkluderade bedömning av restaureringspotential.',
-    result:
-      'Levererade en restaureringsplan som låg till grund för markägarens ansökan om bidrag för våtmarksåterställning.',
-  },
-  {
-    image: projectBiodiversity,
-    alt: 'Nyckelbiotopsbedömning enligt FSC och PEFC i skogsbruk',
-    serviceSlug: 'nyckelbiotoper',
-    title: 'FSC- och PEFC-anpassad nyckelbiotopsbedömning',
-    description:
-      'Genomförde omfattande nyckelbiotopsbedömningar med fältinventering, artidentifiering och analys av ekologiska strukturer. Arbetet utfördes rutinmässigt enligt både FSC:s och PEFC:s krav och integrerades i skogsbrukets planering och hänsynstagande.',
-    result:
-      'Tydliga beslutsunderlag som säkerställde korrekt naturhänsyn och uppfyllande av certifieringskraven.',
-  },
-  {
-    image: projectForestProtection,
-    alt: 'Artskyddsutredning av skyddade arter vid skogsbruksåtgärder',
-    serviceSlug: 'artinventeringar',
-    title: 'Artskyddsutredningar vid skogsbruksåtgärder',
-    description:
-      'Genomförde en artskyddsutredning i ett skogsbruksområde med fokus på skyddade arter och deras livsmiljöer. Arbetet omfattade fältinventering, bedömning av påverkan från planerade skogsbruksåtgärder och förslag på hänsynstaganden.',
-    result:
-      'Levererade ett tydligt beslutsunderlag som möjliggjorde skogsbruksåtgärder med fullgott artskydd och bevarade naturvärden.',
-  },
-  {
-    image: projectWoodpecker,
-    alt: 'Inventering av tretåig hackspett i Sundsvalls kommun',
-    serviceSlug: 'artinventeringar',
-    title:
-      'Inventering av tretåig hackspett (Picoides tridactylus) och bedömning av livsmiljöer',
-    description:
-      'Genomförde en riktad inventering av tretåig hackspett inom Sundsvalls kommun. Arbetet omfattade systematisk fältgenomsökning, livsmiljöbedömning och dokumentation av indirekta spår såsom ringhack och bohål.',
-    result:
-      'Klassade områden utifrån livsmiljövärde och lämnade hänsynsrekommendationer som säkerställde skydd för arten vid fortsatt skogsbruk.',
-  },
-  {
-    image: projectPowerline,
-    alt: 'Naturvärdesinventering längs kraftledningssträcka i skogslandskap',
-    serviceSlug: 'naturvardesinventering',
-    title: 'Naturvärdesinventering vid ny- och ombyggnad av kraftledningar',
-    description:
-      'Utförde naturvärdesinventering (NVI) längs befintliga och planerade kraftledningssträckor i skogslandskap. Arbetet omfattade kartläggning av skyddade arter, nyckelbiotoper och känsliga naturvärden i påverkansområdet.',
-    result:
-      'Levererade ett underlag som användes för att planera underhåll och nydragning med minimal påverkan på biologisk mångfald och skyddade miljöer.',
-  },
-  {
-    image: projectTjader,
-    alt: 'Tjäderinventering med spillningsinventering och akustisk övervakning',
-    serviceSlug: 'fagelinventeringar',
-    title: 'Inventering av tjäder och spelplatser',
-    description:
-      'Genomförde en inventering av tjäder (Tetrao urogallus) med avseende på spelplats inom ett skogsområde. Arbetet kombinerade spillningsinventering längs transekter med passiv akustisk övervakning via ljudbox under spelperioden.',
-    result:
-      'Bedömningen visade att tjäder förekom i området men i låg omfattning och utan tecken på etablerad spelplats, vilket gav ett tydligt beslutsunderlag för fortsatt skogsbruk och planering.',
-  },
-  {
-    image: projectBranning,
-    alt: 'Naturvårdsbränning i skogsbestånd med höga naturvärden',
-    serviceSlug: 'hansynsforslag',
-    title: 'Planering av naturvårdsbränning',
-    description:
-      'Planerade en naturvårdsbränning i ett skogsbestånd med höga naturvärden. Arbetet omfattade bedömning av bränningsobjekt, väderleks- och spridningsrisk, förberedelser av brandgränser samt dokumentation av rättsliga krav och kontaktvägar.',
-    result:
-      'Levererade en genomarbetad bränningsplan som gav markägaren förutsättningar för en säker genomförd bränning med tydliga naturvårdseffekter och efterlevnad av lagkrav.',
-  },
-  {
-    image: projectArtSkydd,
-    alt: 'Artskyddsutredning av skyddade arter och deras livsmiljöer i skogsmark',
-    serviceSlug: 'artinventeringar',
-    title: 'Artskyddsutredningar av skyddade arter',
-    description:
-      'Genomförde artskyddsutredningar med fokus på skyddade arter och deras livsmiljöer inför planerade åtgärder i skogsmark. Arbetet omfattade fältinventering, bedömning av påverkan på populationer och analyser av möjliga störnings- och fragmenteringseffekter.',
-    result:
-      'Levererade konkreta hänsyns- och skyddsåtgärder som möjliggjorde projektets genomförande i enlighet med artskyddsförordningen och säkrade fortsatt överlevnad för berörda arter.',
-  },
-  {
-    image: projectHogaNaturvarden,
-    alt: 'Tallskog med lavar och död ved — skog med höga naturvärden',
-    serviceSlug: 'strategisk-radgivning',
-    title: 'Planering av skogliga åtgärder i skogar med höga naturvärden',
-    description:
-      'Planerade skogliga åtgärder i bestånd med höga naturvärden, där virkesuttag vägdes mot bevarande av biologisk mångfald. Arbetet omfattade naturvärdesbedömning, avgränsning av hänsynsytor och utformning av skötselåtgärder med hänsyn till nyckelbiotoper och skyddsvärda strukturer.',
-    result:
-      'Levererade en åtgärdsplan som kombinerade ekonomiskt skogsbruk med ett starkt naturhänsynstagande och uppfyllde både lagkrav och certifieringskrav enligt FSC och PEFC.',
-  },
-];
+const projectImages: Record<string, string> = {
+  projectTimber,
+  projectReforestation,
+  projectConservation,
+  projectWetland,
+  projectBiodiversity,
+  projectForestProtection,
+  projectWoodpecker,
+  projectPowerline,
+  projectTjader,
+  projectBranning,
+  projectArtSkydd,
+  projectHogaNaturvarden,
+};
+
 
 const ProjectsSection = () => {
   return (
@@ -162,7 +55,7 @@ const ProjectsSection = () => {
             >
               <div className='overflow-hidden h-56'>
                 <img
-                  src={project.image}
+                  src={projectImages[project.image]}
                   alt={project.alt}
                   className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
                   loading='lazy'
