@@ -3,6 +3,9 @@ import path from "path";
 import type { Plugin } from "vite";
 import { serviceExtras } from "./src/data/serviceExtras";
 import { services } from "./src/data/services";
+import { projects } from "./src/data/projects";
+import { homeFaqs } from "./src/data/homeFaqs";
+import { processSteps } from "./src/data/process";
 
 const SITE = "https://beverskog.com";
 
@@ -48,7 +51,8 @@ const pages = (): RoutePage[] => [
           "@type": "BreadcrumbList",
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Hem", item: `${SITE}/` },
-            { "@type": "ListItem", position: 2, name: x.metaTitle.split("|")[0].trim(), item: `${SITE}/tjanster/${slug}` },
+            { "@type": "ListItem", position: 2, name: "Tjänster", item: `${SITE}/tjanster` },
+            { "@type": "ListItem", position: 3, name: x.metaTitle.split("|")[0].trim(), item: `${SITE}/tjanster/${slug}` },
           ],
         },
         {
@@ -102,13 +106,40 @@ export default function prerenderMeta(): Plugin {
       const homeHtml =
         `<main><h1>Beverskog Consulting AB</h1>` +
         `<p>Skoglig expertis för hållbara beslut. Naturvärdesinventering, fågelinventeringar och artskydd som ger säkra beslutsunderlag för skogsbruk och exploatering.</p>` +
+        `<h2>Om mig</h2>` +
+        `<p>Jag är skogsvetare och specialist inom fågelinventeringar, artskydd och naturvård i skogslandskap. Genom Beverskog Consulting AB hjälper jag skogsbolag, markägare, energibolag och konsulter att hantera naturvärden och artskyddsfrågor.</p>` +
+        `<p>Tidigare har jag arbetat som naturvårdsspecialist på Holmen Skog och har även erfarenhet av virkesköp och skoglig planering.</p>` +
         `<h2>Tjänster</h2><ul>${services
           .map((s) => `<li><a href="/tjanster/${s.slug}">${esc(s.title)}</a> – ${esc(s.description)}</li>`)
-          .join("")}</ul>` +
-        `<p><a href="tel:+46708896588">070-889 65 88</a> · <a href="mailto:lynx@beverskog.com">lynx@beverskog.com</a></p></main>`;
+          .join("")}</ul><p><a href="/tjanster">Se alla tjänster</a></p>` +
+        `<h2>Projekt &amp; uppdrag inom naturvärdesinventering, fågelinventering och artskydd</h2>${projects
+          .map(
+            (p) =>
+              `<article><h3>${esc(p.title)}</h3><p>${esc(p.description)}</p><p>${esc(p.result)}</p>` +
+              `<p><a href="/tjanster/${p.serviceSlug}">Läs mer om ${esc(services.find((s) => s.slug === p.serviceSlug)?.title.toLowerCase() ?? "tjänsten")}</a></p></article>`,
+          )
+          .join("")}` +
+        `<h2>Så går ett uppdrag till</h2><ol>${processSteps
+          .map((s) => `<li><h3>${esc(s.t)}</h3><p>${esc(s.d)}</p></li>`)
+          .join("")}</ol>` +
+        `<h2>Frågor om naturvärdesinventering, fågelinventering och artskydd</h2>${homeFaqs
+          .map(
+            (f) =>
+              `<h3>${esc(f.q)}</h3><p>${esc(f.a)}</p>` +
+              (f.link ? `<p><a href="${f.link.to}">${esc(f.link.label)}</a></p>` : ""),
+          )
+          .join("")}` +
+        `<h2>Kontakt</h2><p><a href="tel:+46708896588">070-889 65 88</a> · <a href="mailto:lynx@beverskog.com">lynx@beverskog.com</a></p></main>`;
+      const homeLd = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: homeFaqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+      }).replace(/</g, "\\u003c");
       fs.writeFileSync(
         indexPath,
-        base.replace('<div id="root"></div>', `<div id="root">${homeHtml}</div>`),
+        base
+          .replace('<div id="root"></div>', `<div id="root">${homeHtml}</div>`)
+          .replace("</head>", `<script type="application/ld+json">${homeLd}</script></head>`),
       );
 
       for (const p of pages()) {

@@ -18,7 +18,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <PageMeta
-        title="Naturvärdesinventering & fågelinventering | Beverskog Consulting AB"
+        title="Naturvärdesinventering, fågelinventering & artskydd | Beverskog Consulting"
         description="Naturvärdesinventering (NVI), fågelinventering och artskyddsutredning av skogsvetare med spetskompetens inom artskydd. Säkra beslutsunderlag för skogsbruk, exploatering, FSC och PEFC."
         jsonLd={[{
           "@context": "https://schema.org",
