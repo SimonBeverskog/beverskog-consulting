@@ -108,10 +108,10 @@ export default function prerenderMeta(): Plugin {
         `<p>Skoglig expertis för hållbara beslut. Naturvärdesinventering, fågelinventeringar och artskydd som ger säkra beslutsunderlag för skogsbruk och exploatering.</p>` +
         `<h2>Lynx Beverskog</h2>` +
         `<p>Skogsvetare, naturvårdskonsult, ornitolog och ringmärkare</p>` +
-        `<p>Jag hjälper skogsägare, företag och myndigheter med kvalificerade beslutsunderlag inom naturvård och artskydd. Jag har en kandidatexamen i skogsvetenskap från Linnéuniversitetet och fem års erfarenhet som naturvårdsspecialist på Holmen Skog.</p>` +
-        `<p>Min specialistkompetens inom skogslevande fåglar kombineras med erfarenhet av skoglig planering och certifieringsfrågor. Det ger en praktisk grund för inventeringar, analyser och åtgärdsförslag.</p>` +
-        `<p>Jag utför uppdrag i hela Sverige med utgångspunkt i Småland. Underlagen anpassas till ditt projekt och kan omfatta rapporter, GIS-kartor och konkreta åtgärdsförslag.</p>` +
-        `<p>Du har direktkontakt med mig genom hela uppdraget – från planering och fältarbete till analys och rapportering.</p>` +
+        `<p>Jag driver Beverskog Consulting AB och arbetar med naturvärdesinventering, fågelinventering, artskydd och skoglig rådgivning. Jag är utbildad skogsvetare vid Linnéuniversitetet och har fem års erfarenhet som naturvårdsspecialist på Holmen Skog.</p>` +
+        `<p>Som ornitolog och ringmärkare har jag mångårig erfarenhet av fåglar, med särskild kunskap om skogslevande arter. Jag kombinerar naturvårdskunskap med praktisk erfarenhet av skogsbruk för att ta fram tydliga och användbara beslutsunderlag.</p>` +
+        `<p>Jag arbetar i hela Sverige med utgångspunkt i Småland och möjlighet att utgå från Uppsala. Jag tar fram rapporter, kartunderlag och konkreta åtgärdsförslag anpassade till ditt uppdrag.</p>` +
+        `<p>Hos mig har du direktkontakt med personen som planerar, genomför och rapporterar ditt uppdrag. Det ger nära samarbete och korta beslutsvägar.</p>` +
         `<h2>Tjänster</h2><ul>${services
           .map((s) => `<li><a href="/tjanster/${s.slug}">${esc(s.title)}</a> – ${esc(s.description)}</li>`)
           .join("")}</ul><p><a href="/tjanster">Se alla tjänster</a></p>` +
