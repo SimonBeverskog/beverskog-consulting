@@ -30,13 +30,13 @@ const AboutSection = () => {
               Lynx Beverskog
             </h2>
             <p className="font-body text-lg font-semibold text-primary mb-6">
-              Skogsvetare, naturvårdskonsult, ornitolog och ringmärkare
+              Skogsvetare och specialist inom naturvård och artskydd
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4 font-body">
-              Jag driver Beverskog Consulting AB och arbetar med naturvärdesinventering, fågelinventering, artskydd och skoglig rådgivning. Jag är utbildad skogsvetare vid Linnéuniversitetet och har fem års erfarenhet som naturvårdsspecialist på Holmen Skog.
+              Jag driver Beverskog Consulting AB och hjälper skogsägare, företag och myndigheter med naturvärdesinventering, fågelinventering och artskyddsfrågor. Med bakgrund som skogsvetare och naturvårdsspecialist på Holmen Skog förenar jag specialistkunskap med praktisk förståelse för skogsbruk.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4 font-body">
-              Som ornitolog och ringmärkare har jag mångårig erfarenhet av fåglar, med särskild kunskap om skogslevande arter. Jag kombinerar naturvårdskunskap med praktisk erfarenhet av skogsbruk för att ta fram tydliga och användbara beslutsunderlag.
+              Min särskilda kompetens finns inom fåglar, artskydd och skoglig naturvård. Jag tar fram välgrundade beslutsunderlag och konkreta rekommendationer för skogsbruk och exploatering.
             </p>
             <h3 className="font-heading text-xl font-semibold text-foreground mb-3">Specialområden</h3>
             <ul className="list-disc pl-5 space-y-1 text-muted-foreground font-body mb-6">
@@ -46,10 +46,10 @@ const AboutSection = () => {
               <li>Skoglig naturvård, <Link to="/tjanster/nyckelbiotoper" className="text-primary hover:underline">nyckelbiotoper</Link> och FSC/PEFC</li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-4 font-body">
-              Jag arbetar i hela Sverige med utgångspunkt i Småland och möjlighet att utgå från Uppsala. Jag tar fram rapporter, kartunderlag och konkreta åtgärdsförslag anpassade till ditt uppdrag.
+              Jag arbetar med uppdrag i hela Sverige, med underlag och rådgivning anpassade till projektets behov.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6 font-body">
-              Hos mig har du direktkontakt med personen som planerar, genomför och rapporterar ditt uppdrag. Det ger nära samarbete och korta beslutsvägar.
+              Du har direktkontakt med mig genom hela uppdraget – med tydlig kommunikation och korta beslutsvägar.
             </p>
             <Button asChild size="lg">
               <a href="#contact">Kontakta Lynx<ArrowRight className="ml-2 h-4 w-4" /></a>
