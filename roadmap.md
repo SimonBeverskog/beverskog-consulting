@@ -1,1 +1,1 @@
-- [ ] Återgå till presentationens tidigare personliga ton och innehåll, i något kortare form.
+- [x] Återgå till presentationens tidigare personliga ton och innehåll, i något kortare form.
