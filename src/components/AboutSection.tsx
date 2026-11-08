@@ -33,27 +33,23 @@ const AboutSection = () => {
               Skogsvetare, naturvårdskonsult, ornitolog och ringmärkare
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4 font-body">
-              Jag driver Beverskog Consulting AB och arbetar med naturvärdesinventering, fågelinventering, artskydd och skoglig rådgivning. Jag har en kandidatexamen i skogsvetenskap från Linnéuniversitetet och fem års erfarenhet som naturvårdsspecialist på Holmen Skog. Jag har även erfarenhet av virkesköp, traktplanering och skogliga fältinventeringar för Skogforsk.
+              Jag driver Beverskog Consulting AB. Med en examen i skogsvetenskap och fem år som naturvårdsspecialist på Holmen Skog förenar jag naturvårdskunskap med praktisk förståelse för skogsbruk.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4 font-body">
-              Som ornitolog och ringmärkare har jag mångårig erfarenhet av fåglar, artbestämning och ringmärkning, med särskild kunskap om skogslevande fåglar. Kombinationen av ekologisk specialistkunskap och praktisk förståelse för skogsbruk gör att jag kan ta fram tydliga, välgrundade och användbara beslutsunderlag.
+              Min spetskompetens är skogslevande fåglar och artskydd. Jag tar fram tydliga beslutsunderlag för skogsbruk och exploatering.
             </p>
             <h3 className="font-heading text-xl font-semibold text-foreground mb-3">Specialområden</h3>
             <ul className="list-disc pl-5 space-y-1 text-muted-foreground font-body mb-6">
-              <li>Fåglar, artbestämning och ringmärkning</li>
               <li><Link to="/tjanster/fagelinventeringar" className="text-primary hover:underline">Fågelinventering</Link> och riktade artinventeringar</li>
               <li><Link to="/tjanster/naturvardesinventering" className="text-primary hover:underline">Naturvärdesinventering, NVI</Link></li>
               <li><Link to="/tjanster/artinventeringar" className="text-primary hover:underline">Artskydd och biologisk mångfald</Link></li>
-              <li>Skoglig naturvård och hänsynsplanering</li>
-              <li><Link to="/tjanster/nyckelbiotoper" className="text-primary hover:underline">Nyckelbiotopsinventering</Link></li>
-              <li>FSC- och PEFC-frågor</li>
+              <li>Skoglig naturvård, <Link to="/tjanster/nyckelbiotoper" className="text-primary hover:underline">nyckelbiotoper</Link> och FSC/PEFC</li>
             </ul>
-            <h3 className="font-heading text-xl font-semibold text-foreground mb-3">Arbetsområde och leveranser</h3>
             <p className="text-muted-foreground leading-relaxed mb-4 font-body">
-              Jag genomför uppdrag i hela Sverige, med utgångspunkt i Småland och möjlighet att utgå från Uppsala. Leveranser kan omfatta rapporter, GIS-underlag, kartor, fotodokumentation, analyser och konkreta åtgärdsförslag.
+              Jag arbetar i hela Sverige med utgångspunkt i Småland. Du får rapporter, kartunderlag och konkreta råd anpassade till ditt uppdrag.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6 font-body">
-              Hos mig har du direktkontakt med personen som planerar, genomför, analyserar och rapporterar ditt uppdrag. Det ger korta beslutsvägar, nära samarbete och tydlig kommunikation genom hela arbetet.
+              Du har direktkontakt med mig från första samtalet till färdigt underlag.
             </p>
             <Button asChild size="lg">
               <a href="#contact">Kontakta Lynx<ArrowRight className="ml-2 h-4 w-4" /></a>
