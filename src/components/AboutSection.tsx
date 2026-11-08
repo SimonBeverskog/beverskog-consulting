@@ -33,10 +33,10 @@ const AboutSection = () => {
               Skogsvetare och specialist inom naturvård och artskydd
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4 font-body">
-              Jag driver Beverskog Consulting AB och hjälper skogsägare, företag och myndigheter med naturvärdesinventering, fågelinventering och artskyddsfrågor. Med bakgrund som skogsvetare och naturvårdsspecialist på Holmen Skog förenar jag specialistkunskap med praktisk förståelse för skogsbruk.
+              Jag driver Beverskog Consulting AB och hjälper skogsägare, företag och myndigheter med naturvärdesinventering, fågelinventering och artskyddsfrågor. Jag har bred erfarenhet av naturvård och skoglig rådgivning genom arbete och uppdrag för flera företag.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4 font-body">
-              Min särskilda kompetens finns inom fåglar, artskydd och skoglig naturvård. Jag tar fram välgrundade beslutsunderlag och konkreta rekommendationer för skogsbruk och exploatering.
+              Som skogsvetare förenar jag gedigen kunskap om fåglar, artskydd och skoglig naturvård med praktisk förståelse för skogsbruk. Jag tar fram välgrundade beslutsunderlag och konkreta rekommendationer för skogsbruk och exploatering.
             </p>
             <h3 className="font-heading text-xl font-semibold text-foreground mb-3">Specialområden</h3>
             <ul className="list-disc pl-5 space-y-1 text-muted-foreground font-body mb-6">
