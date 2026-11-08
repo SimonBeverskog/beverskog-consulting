@@ -33,10 +33,10 @@ const AboutSection = () => {
               Skogsvetare, naturvårdskonsult, ornitolog och ringmärkare
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4 font-body">
-              Jag driver Beverskog Consulting AB. Med en examen i skogsvetenskap och fem år som naturvårdsspecialist på Holmen Skog förenar jag naturvårdskunskap med praktisk förståelse för skogsbruk.
+              Jag driver Beverskog Consulting AB och arbetar med naturvärdesinventering, fågelinventering, artskydd och skoglig rådgivning. Jag är utbildad skogsvetare vid Linnéuniversitetet och har fem års erfarenhet som naturvårdsspecialist på Holmen Skog.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4 font-body">
-              Min spetskompetens är skogslevande fåglar och artskydd. Jag tar fram tydliga beslutsunderlag för skogsbruk och exploatering.
+              Som ornitolog och ringmärkare har jag mångårig erfarenhet av fåglar, med särskild kunskap om skogslevande arter. Jag kombinerar naturvårdskunskap med praktisk erfarenhet av skogsbruk för att ta fram tydliga och användbara beslutsunderlag.
             </p>
             <h3 className="font-heading text-xl font-semibold text-foreground mb-3">Specialområden</h3>
             <ul className="list-disc pl-5 space-y-1 text-muted-foreground font-body mb-6">
@@ -46,10 +46,10 @@ const AboutSection = () => {
               <li>Skoglig naturvård, <Link to="/tjanster/nyckelbiotoper" className="text-primary hover:underline">nyckelbiotoper</Link> och FSC/PEFC</li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mb-4 font-body">
-              Jag arbetar i hela Sverige med utgångspunkt i Småland. Du får rapporter, kartunderlag och konkreta råd anpassade till ditt uppdrag.
+              Jag arbetar i hela Sverige med utgångspunkt i Småland och möjlighet att utgå från Uppsala. Jag tar fram rapporter, kartunderlag och konkreta åtgärdsförslag anpassade till ditt uppdrag.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6 font-body">
-              Du har direktkontakt med mig från första samtalet till färdigt underlag.
+              Hos mig har du direktkontakt med personen som planerar, genomför och rapporterar ditt uppdrag. Det ger nära samarbete och korta beslutsvägar.
             </p>
             <Button asChild size="lg">
               <a href="#contact">Kontakta Lynx<ArrowRight className="ml-2 h-4 w-4" /></a>

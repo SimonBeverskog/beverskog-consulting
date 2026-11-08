@@ -106,9 +106,12 @@ export default function prerenderMeta(): Plugin {
       const homeHtml =
         `<main><h1>Beverskog Consulting AB</h1>` +
         `<p>Skoglig expertis för hållbara beslut. Naturvärdesinventering, fågelinventeringar och artskydd som ger säkra beslutsunderlag för skogsbruk och exploatering.</p>` +
-        `<h2>Om mig</h2>` +
-        `<p>Jag är skogsvetare och specialist inom fågelinventeringar, artskydd och naturvård i skogslandskap. Genom Beverskog Consulting AB hjälper jag skogsbolag, markägare, energibolag och konsulter att hantera naturvärden och artskyddsfrågor.</p>` +
-        `<p>Tidigare har jag arbetat som naturvårdsspecialist på Holmen Skog och har även erfarenhet av virkesköp och skoglig planering.</p>` +
+        `<h2>Lynx Beverskog</h2>` +
+        `<p>Skogsvetare, naturvårdskonsult, ornitolog och ringmärkare</p>` +
+        `<p>Jag driver Beverskog Consulting AB och arbetar med naturvärdesinventering, fågelinventering, artskydd och skoglig rådgivning. Jag är utbildad skogsvetare vid Linnéuniversitetet och har fem års erfarenhet som naturvårdsspecialist på Holmen Skog.</p>` +
+        `<p>Som ornitolog och ringmärkare har jag mångårig erfarenhet av fåglar, med särskild kunskap om skogslevande arter. Jag kombinerar naturvårdskunskap med praktisk erfarenhet av skogsbruk för att ta fram tydliga och användbara beslutsunderlag.</p>` +
+        `<p>Jag arbetar i hela Sverige med utgångspunkt i Småland och möjlighet att utgå från Uppsala. Jag tar fram rapporter, kartunderlag och konkreta åtgärdsförslag anpassade till ditt uppdrag.</p>` +
+        `<p>Hos mig har du direktkontakt med personen som planerar, genomför och rapporterar ditt uppdrag. Det ger nära samarbete och korta beslutsvägar.</p>` +
         `<h2>Tjänster</h2><ul>${services
           .map((s) => `<li><a href="/tjanster/${s.slug}">${esc(s.title)}</a> – ${esc(s.description)}</li>`)
           .join("")}</ul><p><a href="/tjanster">Se alla tjänster</a></p>` +
