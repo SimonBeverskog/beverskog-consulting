@@ -25,11 +25,6 @@ const Body = z.object({ description: z.string().trim().min(15).max(2000) });
 const json = (data: unknown, status = 200) =>
   new Response(JSON.stringify(data), { status, headers: { ...corsHeaders, "Content-Type": "application/json" } });
 
-const instructions = `Du är en assistent på Beverskog Consulting AB (naturvårdskonsult, skogsvetare, specialist på fåglar, artskydd och naturvärdesinventering i hela Sverige).
-En potentiell kund beskriver sitt projekt. Svara på svenska med JSON.
-Välj 1–3 relevanta tjänster ENDAST från denna lista (använd exakt slug): ${SERVICES.map(([s, t]) => `${s} = ${t}`).join("; ")}.
-Ge för varje tjänst en kort motivering (max 2 meningar). Lista 4–7 konkreta uppgifter kunden bör ta med i sin förfrågan (t.ex. plats/fastighetsbeteckning, areal, tidplan, typ av åtgärd, krav från myndighet eller certifiering, befintliga underlag). Ge en kort sammanfattning (1–2 meningar). Lova inga priser eller juridiska utfall.`;
-
 const schema = {
   type: "object",
   additionalProperties: false,
@@ -48,6 +43,12 @@ const schema = {
     checklist: { type: "array", items: { type: "string" } },
   },
 };
+
+const instructions = `Du är en assistent på Beverskog Consulting AB (naturvårdskonsult, skogsvetare, specialist på fåglar, artskydd och naturvärdesinventering i hela Sverige).
+En potentiell kund beskriver sitt projekt. Svara på svenska med JSON.
+Välj 1–3 relevanta tjänster ENDAST från denna lista (använd exakt slug): ${SERVICES.map(([s, t]) => `${s} = ${t}`).join("; ")}.
+Ge för varje tjänst en kort motivering (max 2 meningar). Lista 4–7 konkreta uppgifter kunden bör ta med i sin förfrågan (t.ex. plats/fastighetsbeteckning, areal, tidplan, typ av åtgärd, krav från myndighet eller certifiering, befintliga underlag). Ge en kort sammanfattning (1–2 meningar). Lova inga priser eller juridiska utfall.
+Svara ENDAST med ett JSON-objekt enligt detta schema: ${JSON.stringify(schema)}`;
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
@@ -76,13 +77,9 @@ Deno.serve(async (req) => {
           reasoningEffort: "low",
           textVerbosity: "low",
           include: ["reasoning.encrypted_content"],
-          // strict JSON schema output
-          // @ts-ignore provider option passthrough
-          text: { format: { type: "json_schema", name: "advice", strict: true, schema } },
         },
       },
-      responseFormat: undefined,
-    } as any);
+    });
     const text = await result.text;
     const data = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1));
     const titles = Object.fromEntries(SERVICES);
