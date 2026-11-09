@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import PageMeta from "@/components/PageMeta";
 import FaqSection from "@/components/FaqSection";
 import ProcessSection from "@/components/ProcessSection";
+import ProjectAdvisorSection from "@/components/ProjectAdvisorSection";
 
 
 const Index = () => {
@@ -33,6 +34,7 @@ const Index = () => {
         <ProcessSection />
         <WhyChooseSection />
         <FaqSection />
+        <ProjectAdvisorSection />
         <ContactSection />
       </main>
       <Footer />
