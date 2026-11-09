@@ -106,9 +106,9 @@ export default function prerenderMeta(): Plugin {
       const homeHtml =
         `<main><h1>Beverskog Consulting AB</h1>` +
         `<p>Skoglig expertis för hållbara beslut. Naturvärdesinventering, fågelinventeringar och artskydd som ger säkra beslutsunderlag för skogsbruk och exploatering.</p>` +
-        `<h2>Lynx Beverskog</h2>` +
+        `<h2>Lynx Beverskog – grundare av Beverskog Consulting</h2>` +
         `<p>Skogsvetare och specialist inom naturvård och artskydd</p>` +
-        `<p>Jag driver Beverskog Consulting AB och hjälper skogsägare, företag och myndigheter med naturvärdesinventering, fågelinventering och artskyddsfrågor. Jag har bred erfarenhet av naturvård och skoglig rådgivning genom arbete och uppdrag för flera företag.</p>` +
+        `<p>Jag driver Beverskog Consulting AB och hjälper skogsägare, företag och myndigheter med naturvärdesinventering, fågelinventering och artskyddsfrågor. Jag har lång och bred erfarenhet av naturvård och skoglig rådgivning från uppdrag åt flera skogsbolag, energibolag och konsultföretag.</p>` +
         `<p>Som skogsvetare förenar jag gedigen kunskap om fåglar, artskydd och skoglig naturvård med praktisk förståelse för skogsbruk. Jag tar fram välgrundade beslutsunderlag och konkreta rekommendationer för skogsbruk och exploatering.</p>` +
         `<p>Jag arbetar med uppdrag i hela Sverige, med underlag och rådgivning anpassade till projektets behov.</p>` +
         `<p>Du har direktkontakt med mig genom hela uppdraget – med tydlig kommunikation och korta beslutsvägar.</p>` +

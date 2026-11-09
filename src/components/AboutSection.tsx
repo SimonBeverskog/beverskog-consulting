@@ -24,16 +24,16 @@ const AboutSection = () => {
 
           <div>
             <p className="text-sm font-semibold tracking-widest text-accent uppercase mb-2 font-body">
-              Personen bakom Beverskog Consulting
+              Din konsult inom naturvård och artskydd
             </p>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Lynx Beverskog
+              Lynx Beverskog – grundare av Beverskog Consulting
             </h2>
             <p className="font-body text-lg font-semibold text-primary mb-6">
               Skogsvetare och specialist inom naturvård och artskydd
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4 font-body">
-              Jag driver Beverskog Consulting AB och hjälper skogsägare, företag och myndigheter med naturvärdesinventering, fågelinventering och artskyddsfrågor. Jag har bred erfarenhet av naturvård och skoglig rådgivning genom arbete och uppdrag för flera företag.
+              Jag driver Beverskog Consulting AB och hjälper skogsägare, företag och myndigheter med naturvärdesinventering, fågelinventering och artskyddsfrågor. Jag har lång och bred erfarenhet av naturvård och skoglig rådgivning från uppdrag åt flera skogsbolag, energibolag och konsultföretag.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4 font-body">
               Som skogsvetare förenar jag gedigen kunskap om fåglar, artskydd och skoglig naturvård med praktisk förståelse för skogsbruk. Jag tar fram välgrundade beslutsunderlag och konkreta rekommendationer för skogsbruk och exploatering.
