@@ -30,7 +30,20 @@ const pages = (): RoutePage[] => [
     heading: x.metaTitle.split("|")[0].trim(),
     body: x.intro,
     extraHtml:
+      (() => {
+        const service = services.find((s) => s.slug === slug);
+        if (!service) return "";
+        return `<p>${esc(service.longDescription)}</p>`;
+      })() +
       `<h2>Kundnytta</h2><ul>${x.benefits.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>` +
+      (() => {
+        const service = services.find((s) => s.slug === slug);
+        if (!service) return "";
+        return `<h2>Därför anlitar kunder Beverskog Consulting</h2>` +
+          `<p>${esc(service.whyHireMeIntro)}</p>` +
+          `<ul>${service.whyHireMeBullets.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>` +
+          `<p>${esc(service.whyHireMeOutro)}</p>`;
+      })() +
       `<h2>Vanliga frågor</h2>${x.faq.map((f) => `<h3>${esc(f.question)}</h3><p>${esc(f.answer)}</p>`).join("")}` +
       `<h2>Relaterade tjänster</h2><ul>${x.related
         .filter((r) => serviceExtras[r])

@@ -1,1 +1,3 @@
 - [x] Återgå till presentationens tidigare personliga ton och innehåll, i något kortare form.
+- [x] Gör tjänstesidornas fullständiga beskrivningar och uppdragsgivarens nytta läsbara för Google utan JavaScript.
+- [x] Kontrollera samtliga åtta tjänstesidor och deras interna länkar.
