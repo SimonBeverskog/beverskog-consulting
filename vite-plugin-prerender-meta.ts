@@ -154,7 +154,7 @@ export default function prerenderMeta(): Plugin {
       fs.writeFileSync(
         indexPath,
         base
-          .replace('<div id="root"></div>', `<div id="root">${homeHtml}</div>`)
+          .replace('<div id="root"></div>', `<div id="root"><div class="prerender">${homeHtml}</div></div>`)
           .replace("</head>", `<script type="application/ld+json">${homeLd}</script></head>`),
       );
 
@@ -175,7 +175,7 @@ export default function prerenderMeta(): Plugin {
           .replace(/(<link\s+rel="alternate"\s+hreflang="x-default"\s+href=")[^"]*(")/, `$1${url}$2`)
           .replace(
             '<div id="root"></div>',
-            `<div id="root"><main><h1>${esc(p.heading)}</h1><p>${esc(p.body)}</p>${p.extraHtml ?? ""}<p><a href="/">Beverskog Consulting AB</a> · <a href="tel:+46708896588">070-889 65 88</a></p></main></div>`,
+            `<div id="root"><div class="prerender"><main><h1>${esc(p.heading)}</h1><p>${esc(p.body)}</p>${p.extraHtml ?? ""}<p><a href="/">Beverskog Consulting AB</a> · <a href="tel:+46708896588">070-889 65 88</a></p></main></div></div>`,
           );
         if (p.jsonLd) {
           const ld = JSON.stringify(p.jsonLd).replace(/</g, "\\u003c");
